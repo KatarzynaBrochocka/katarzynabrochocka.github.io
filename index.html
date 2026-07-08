@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Katarzyna Brochocka | Composer & Pianist</title>
+
+<style>
+
+/* Styl surowego, prestiżowego archiwum */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+
+font-family: 'Georgia', serif;
+
+background-color: #f9f9f6;
+
+color: #1a1a1a;
+
+line-height: 1.6;
+
+padding: 40px 20px;
+
+}
+
+.container {
+
+max-width: 1000px;
+
+margin: 0 auto;
+
+}
+
+header {
+
+border-bottom: 1px solid #1a1a1a;
+
+padding-bottom: 20px;
+
+margin-bottom: 40px;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: flex-end;
+
+}
+
+h1 {
+
+font-size: 28px;
+
+font-weight: normal;
+
+letter-spacing: 2px;
+
+text-transform: uppercase;
+
+}
+
+.subtitle {
+
+font-family: sans-serif;
+
+font-size: 12px;
+
+letter-spacing: 3px;
+
+color: #666;
+
+text-transform: uppercase;
+
+margin-top: 5px;
+
+}
+
+/* Galeria 3 zdjęć */
+
+.photo-gallery {
+
+display: grid;
+
+grid-template-columns: 2fr 1fr 1fr;
+
+gap: 15px;
+
+margin-bottom: 50px;
+
+}
+
+.photo-gallery img {
+
+width: 100%;
+
+height: 400px;
+
+object-fit: cover;
+
+filter: grayscale(30%);
+
+border: 1px solid #ddd;
+
+}
+
+.photo-gallery img:not(:first-child) {
+
+height: 192px;
+
+}
+
+.gallery-stack {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 16px;
+
+}
+
+/* Dwukolumnowy biogram */
+
+.biography {
+
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 50px;
+
+margin-bottom: 60px;
+
+font-size: 15px;
+
+text-align: justify;
+
+}
+
+.lang-title {
+
+font-family: sans-serif;
+
+font-size: 11px;
+
+letter-spacing: 2px;
+
+text-transform: uppercase;
+
+color: #888;
+
+margin-bottom: 15px;
+
+border-bottom: 1px dashed #ccc;
+
+padding-bottom: 5px;
+
+}
+
+/* Sekcje merytoryczne */
+
+.section-title {
+
+font-family: sans-serif;
+
+font-size: 14px;
+
+letter-spacing: 3px;
+
+text-transform: uppercase;
+
+border-bottom: 1px solid #1a1a1a;
+
+padding-bottom: 5px;
+
+margin-bottom: 25px;
+
+margin-top: 50px;
+
+}
+
+.grid-blocks {
+
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 40px;
+
+}
+
+.block {
+
+margin-bottom: 20px;
+
+}
+
+.block h3 {
+
+font-size: 18px;
+
+font-weight: normal;
+
+margin-bottom: 10px;
+
+}
+
+.block p {
+
+font-size: 14px;
+
+color: #444;
+
+margin-bottom: 15px;
+
+}
+
+/* Przyciski i linki */
+
+.btn {
+
+display: inline-block;
+
+font-family: sans-serif;
+
+font-size: 11px;
+
+letter-spacing: 1px;
+
+text-transform: uppercase;
+
+text-decoration: none;
+
+color: #1a1a1a;
+
+border: 1px solid #1a1a1a;
+
+padding: 8px 15px;
+
+transition: all 0.3s;
+
+}
+
+.btn:hover {
+
+background-color: #1a1a1a;
+
+color: #f9f9f6;
+
+}
+
+/* Wideo i Audio */
+
+.media-container {
+
+margin-bottom: 20px;
+
+background: #f0f0ec;
+
+padding: 15px;
+
+border: 1px solid #e0e0dc;
+
+}
+
+iframe, video {
+
+width: 100%;
+
+aspect-ratio: 16/9;
+
+border: none;
+
+}
+
+/* Filtr kontaktowy */
+
+.contact-box {
+
+background-color: #1a1a1a;
+
+color: #f9f9f6;
+
+padding: 40px;
+
+margin-top: 60px;
+
+}
+
+.contact-box h2 {
+
+font-weight: normal;
+
+letter-spacing: 2px;
+
+margin-bottom: 20px;
+
+font-size: 20px;
+
+}
+
+.contact-box p {
+
+font-size: 14px;
+
+color: #ccc;
+
+max-width: 700px;
+
+margin-bottom: 20px;
+
+}
+
+.contact-email {
+
+font-family: sans-serif;
+
+font-size: 18px;
+
+letter-spacing: 1px;
+
+color: #fff;
+
+text-decoration: none;
+
+border-bottom: 1px solid #fff;
+
+}
+
+@media (max-width: 768px) {
+
+.biography, .grid-blocks, .photo-gallery { grid-template-columns: 1fr; }
+
+.photo-gallery img { height: auto !important; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+
+
+<header>
+
+<div>
+
+<h1>Katarzyna Brochocka</h1>
+
+<div class="subtitle">Composer & Pianist</div>
+
+</div>
+
+<div class="subtitle">PL | EN</div>
+
+</header>
+
+
+
+<!-- GALERIA TRZECH ZDJĘĆ -->
+
+<section class="photo-gallery">
+
+<!-- Główne duże zdjęcie -->
+
+<img src="foto1.jpg" alt="Katarzyna Brochocka - fot. 1">
+
+<div class="gallery-stack">
+
+<!-- Dwa mniejsze zdjęcia z boku -->
+
+<img src="foto2.jpg" alt="Katarzyna Brochocka - fot. 2">
+
+<img src="foto3.jpg" alt="Katarzyna Brochocka - fot. 3">
+
+</div>
+
+</section>
+
+
+
+<!-- BIOGRAM DWUJĘZYCZNY -->
+
+<section class="biography">
+
+<div>
+
+<div class="lang-title">Polski</div>
+
+<p><strong>Katarzyna Brochocka</strong> – kompozytorka i pianistka. Autorka utworów symfonicznych, kameralnych oraz muzyki dla teatru dramatycznego i lalkowego. Jej partytury są publikowane na arenie międzynarodowej przez <strong>Universal Edition (Scodo)</strong>. Dorobek kompozytorski obejmuje również autorskie albumy płytowe w oficjalnej dystrybucji krajowej (Universal Music Poland) oraz światowej (NAXOS), a także regularną współpracę z solistami (w tym dedykowany cykl utworów na kontrabas). Mieszka i tworzy w Polsce.</p>
+
+</div>
+
+<div>
+
+<div class="lang-title">English</div>
+
+<p><strong>Katarzyna Brochocka</strong> – composer and pianist. Her portfolio includes symphonic works, chamber music, and scores for dramatic and puppet theatres. Her sheet music is published internationally by <strong>Universal Edition (Scodo)</strong>. Her work is documented across authorial CD albums under domestic distribution (Universal Music Poland) and worldwide distribution (NAXOS). It includes long-term collaborations with soloists, notably a dedicated body of work for the double bass. Based in Poland.</p>
+
+</div>
+
+</section>
+
+
+
+<!-- FILARY PUBLIKACYJNE (Fakty, które odcinają amatorów) -->
+
+<div class="grid-blocks">
+
+<div>
+
+<div class="section-title">Scores & Rentals</div>
+
+<div class="block">
+
+<h3>Universal Edition (Wiedeń)</h3>
+
+<p>Oficjalny katalog dzieł – w tym utwory wielkoorkiestrowe, operowe oraz kameralne – jest zarządzany przez Universal Edition. Zakup partytur PDF/Print oraz wypożyczenia materiałów koncertowych dla filharmonii i teatrów realizowane są bezpośrednio przez platformę wydawcy.</p>
+
+<a href="<!-- TUTAJ_WKLEJ_LINK_DO_UNIVERSAL_EDITION -->" class="btn" target="_blank">Browse Catalogue</a>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="section-title">Discography & Distribution</div>
+
+<div class="block">
+
+<h3>NAXOS & Universal Music</h3>
+
+<p>Autorskie nagrania płytowe kompozytorki podlegają oficjalnej dystrybucji globalnej (NAXOS) oraz krajowej (Universal Music Poland). Dostępne w sprzedaży fizycznej oraz w międzynarodowych bazach streamingowych.</p>
+
+<a href="<!-- TUTAJ_WKLEJ_LINK_DO_SPOTIFY_LUB_NAXOS -->" class="btn" target="_blank">Listen Worldwide</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- SEKCJA VIDEO / AUDIO -->
+
+<div class="section-title">Selected Works / Media</div>
+
+<div class="grid-blocks">
+
+<div class="media-container">
+
+<!-- Przykładowe okno wideo (np. YouTube) -->
+
+<!-- Możesz zamienić poniższy iframe na swój link osadzania z YouTube -->
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Katarzyna Brochocka Work"></iframe>
+
+<div class="subtitle" style="margin-top:10px;">Muzyka Teatralna / Spektakl (Fragment)</div>
+
+</div>
+
+<div class="media-container">
+
+<!-- Drugie okno wideo lub audio -->
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Katarzyna Brochocka Work 2"></iframe>
+
+<div class="subtitle" style="margin-top:10px;">Psalm na głos i kontrabas (Nagranie studyjne)</div>
+
+</div>
+
+</div>
+
+
+
+<!-- FILTR ANTY-JANUSZOWY (Kontakt) -->
+
+<section class="contact-box">
+
+<h2>Professional Inquiries & Commissions</h2>
+
+<p>Wszystkie zamówienia kompozytorskie (muzyka autonomiczna, sceniczna, projekty interdyscyplinarne) realizowane są wyłącznie na podstawie oficjalnych umów, uwzględniających profesjonalne stawki autorskie oraz przekazanie praw zależnych. Zlecenia o charakterze spekulacyjnym (non-profit / pro bono) nie są rozpatrywane.</p>
+
+<p>Zapytania dotyczące nowych utworów, terminów prapremier oraz instrumenta
+
+cji prosimy kierować drogą mailową:</p>
+
+<p style="margin-top: 30px;">
+
+<a href="mailto:katarzyna.brochocka@example.com" class="contact-email">katarzyna.brochocka@example.com</a>
+
+</p>
+
+</section>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
