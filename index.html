@@ -30,6 +30,19 @@ padding: 40px 20px;
 
 }
 
+  .photo-container {
+  width: 100%;
+  max-width: 350px; /* jednakowa szerokość dla obu zdjęć */
+  height: 450px;    /* jednakowa wysokość */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ładnie kkadruje zdjęcie, usuwając nierówności */
+}
 .container {
 
 max-width: 1000px;
