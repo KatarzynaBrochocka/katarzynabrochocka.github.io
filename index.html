@@ -72,6 +72,12 @@ changeLang('pl');
 margin-bottom: 50px;
 width: 100%;
 }
+ changeLang('en');
+</script>
+.photo-gallery {
+margin-bottom: 50px;
+width: 100%;
+}
 .photo-wrapper {
 position: relative;
 display: block;
@@ -81,7 +87,7 @@ padding-right: 30px;
 }
 .photo-gallery img {
 width: 100%;
-max-height: 500px;
+max-height: 768px;
 object-fit: cover;
 filter: grayscale(40%);
 border: 1px solid #ddd;
@@ -99,7 +105,7 @@ font-style: italic;
 font-size: 11px;
 color: #800080;
 letter-spacing: 0;
-text-transform: rotate(-45deg); /* Brak kapitalików */
+text-transform: rotate(-90deg); /* Brak kapitalików */
 }
  
   .autor{
@@ -221,10 +227,12 @@ color: #f9f9f6;
 display: none;
 }
 html[lang="pl"] [lang="pl"] {
-display: block;
+display: block; 
+ html[lang="en"]{ display: none;}
 }
 html[lang="en"] [lang="en"] {
-display: block;
+display: block; 
+ html[lang="pl"]{ display: none;}
 }
 
 <section class="biography">
@@ -439,7 +447,7 @@ border-bottom: 1px solid #fff;
 
 <img src="foto1.jpg" filter: grayscale(10%) scale=1 alt="Katarzyna Brochocka - fot. 1">
  
-<div class="lang-title2" color: #800080; >pic. Katarzyna Strzelecka"</div>
+<div class="lang-title2" >pic. Katarzyna Strzelecka"</div>
 <!-- Główne duże zdjęcie -->
  
 <section class="photo-gallery">
@@ -448,8 +456,20 @@ border-bottom: 1px solid #fff;
 </div>
 </section>
   
-<!-- BIOGRAM DWUJĘZYCZNY -->
+< /*Ukrywanie nieaktywnego języka */
+ 
+ </section> [lang="pl"], [lang="en"] {
+display: none;
+}
+html[lang="pl"] [lang="pl"] {
+display: block;
+}
+html[lang="en"] [lang="en"] {
+display: block;
+}
+ /*!-- BIOGRAM DWUJĘZYCZNY -->*/
 
+ 
 <section class="biography">
 
 <div>
