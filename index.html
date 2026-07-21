@@ -41,6 +41,57 @@ color: #666;
 text-transform: uppercase;
 margin-top: 5px;
 }
+ /* przełącznik języków*/
+ .lang-switcher {
+font-family: sans-serif;
+font-size: 12px;
+letter-spacing: 3px;
+color: #666;
+text-transform: uppercase;
+cursor: pointer;
+}
+  .lang-btn {
+transition: color 0.3s;
+}
+.lang-btn.active {
+font-weight: bold;
+color: #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+/* Galeria zdjęć z pionowym podpisem po prawej stronie */
+.photo-gallery {
+margin-bottom: 50px;
+width: 100%;
+}
+.photo-wrapper {
+position: relative;
+display: block;
+width: 100%;
+/* Zostawiamy margines po prawej na pionowy podpis, żeby tekst nie nachodził na zdjęcie */
+padding-right: 30px; 
+}
+.photo-gallery img {
+width: 100%;
+max-height: 500px;
+object-fit: cover;
+filter: grayscale(40%);
+border: 1px solid #ddd;
+display: block;
+}
+.photo-credits {
+position: absolute;
+right: 5px;
+bottom: 0;
+transform: rotate(-90deg);
+transform-origin: bottom right;
+white-space: nowrap;
+font-family: 'Georgia', serif;
+font-style: italic;
+font-size: 11px;
+color: #888;
+letter-spacing: 0;
+text-transform: none; /* Brak kapitalików */
+}
  
   .autor{
     position: absolute;
