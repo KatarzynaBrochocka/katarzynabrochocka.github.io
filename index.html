@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Katarzyna Brochocka | Composer & Pianist</title>
 <style>
- /* Styl surowego, prestiżowego archiwum */ /* { box-sizing: border-box; margin: 0; padding: 0; }
-<img src="foto1.jpg" filter: grayscale(20%) alt="Katarzyna Brochocka - fot. 1"> // <div class="lang-title2" > */
+ /* Styl surowego, prestiżowego archiwum */ /* { box-sizing: border-box; margin: 0; padding: 0; } */
+<img src="foto1.jpg" filter: grayscale(20%) alt="Katarzyna Brochocka - fot. 1"> // <div class="lang-title2" > 
 body {
 font-family: 'Georgia', serif;
 background-color: #f9f9f6;
@@ -15,7 +15,7 @@ line-height: 1.6;
 padding: 40px 20px;
 }
 .container {
-max-width: 1000px;
+max-width: 768px;
 margin: 0 auto;
 }
 header {
@@ -58,7 +58,16 @@ font-weight: bold;
 color: #1a1a1a;
 border-bottom: 1px solid #1a1a1a;
 }
-/* Galeria zdjęć z pionowym podpisem po prawej stronie */
+/* Galeria zdjęć z pionowym podpisem po prawej stronie  <!-- SKRYPT PRZEŁĄCZANIA JĘZYKÓW --> */
+<script>
+function changeLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('btn-pl').classList.remove('active');
+  document.getElementById('btn-en').classList.remove('active');
+  document.getElementById('btn-' + lang).classList.add('active');
+}
+changeLang('pl');
+</script>
 .photo-gallery {
 margin-bottom: 50px;
 width: 100%;
@@ -688,7 +697,6 @@ ment.body.style.overflow = 'auto';
  
 
 <!-- FILTR ANTY-JANUSZOWY (Kontakt) -->
-  
 
 </div>
 
