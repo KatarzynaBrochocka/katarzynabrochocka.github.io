@@ -88,9 +88,9 @@ white-space: nowrap;
 font-family: 'Georgia', serif;
 font-style: italic;
 font-size: 11px;
-color: #888;
+color: #800080;
 letter-spacing: 0;
-text-transform: none; /* Brak kapitalików */
+text-transform: rotate(-45deg); /* Brak kapitalików */
 }
  
   .autor{
@@ -226,7 +226,7 @@ display: block;
  <p><strong>Katarzyna Brochocka</strong> - composer, librettist, and pianist. She is the author of operas, songs, orchestral and chamber works, and theater music. Her works, published by Universal Edition, are regularly presented in Poland and abroad. She has completed commissions from venues including National Forum of Music in Wrosłac and Warmia-Masuria Philharmonic in Olsztyn. She has won international competitions in Poland, the USA, Austria, Italy, and England. In 2021, she earned a Doctor of Musical Arts degree from the Department of Composition and Music Theory at the Fryderyk Chopin University of Music in Warsaw. Her discography includes three albums released on CD Accord: Brochocka, Weinberg: Double Bass Works (2015), Młoda mężatka / The Young Wife (2020), and Brochocka: Unquiet Heart (2025).<p>
  </div>
  </section>
- 
+
  
 .section-title {
 
@@ -430,7 +430,7 @@ border-bottom: 1px solid #fff;
 
 <img src="foto1.jpg" filter: grayscale(10%) scale=1 alt="Katarzyna Brochocka - fot. 1">
  
-<div class="lang-title2">pic. Katarzyna Strzelecka"</div>
+<div class="lang-title2" color: #800080; >pic. Katarzyna Strzelecka"</div>
 <!-- Główne duże zdjęcie -->
  
 <section class="photo-gallery">
@@ -695,18 +695,19 @@ ment.body.style.overflow = 'auto';
 </body>
 
 </html> 
-
- /* Ukrywanie nieaktywnego języka */
-[lang="pl"], [lang="en"] {
+</section /* Ukrywanie nieaktywnego języka */
+</html[lang="pl"], [lang="en"] {
 display: none;
 }
-html[lang="pl"] [lang="pl"] {
+</html[lang="pl"] [lang="pl"] {
 display: block;
 }
-html[lang="en"] [lang="en"] {
+</html[lang="en"] [lang="en"] {
 display: block;
 }
-/* RWD dla urządzeń mobilnych */
+}
+/*<!--- RWD dla urządzeń mobilnych --->*/
+<section class=
 @media (max-width: 768px) {
 .grid-blocks { grid-template-columns: 1fr; gap: 20px; }
 .photo-gallery img { max-height: 350px; }
@@ -735,7 +736,7 @@ display: block;
 <section class="photo-gallery">
 <div class="photo-wrapper">
 <img src="foto1.jpg" alt="Katarzyna Brochocka">
-<div class="photo-credits">pic. Katarzyna Strzelecka</div> 
+<div class="photo-credits": lang-title2>pic. Katarzyna Strzelecka</div> 
 </div>
 </section>
   
