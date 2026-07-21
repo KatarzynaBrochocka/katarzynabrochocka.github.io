@@ -99,7 +99,16 @@ text-transform: none; /* Brak kapitalików */
     left: calc(100% + 2px);
     margin-left: 2px;
   }
-
+/*Ukrywanie nieaktywnego języka */
+ [lang="pl"], [lang="en"] {
+display: none;
+}
+html[lang="pl"] [lang="pl"] {
+display: block;
+}
+html[lang="en"] [lang="en"] {
+display: block;
+}
 /* Galeria 2 zdjęć */ /*
 .photo-gallery {
 display: grid;
@@ -202,7 +211,7 @@ border: 1px solid #1a1a1a;
 padding: 8px 15px;
 transition: all 0.3s;
 }
-.btn:hover {
+.btn: hover {
 background-color: #1a1a1a;
 color: #f9f9f6;
 
