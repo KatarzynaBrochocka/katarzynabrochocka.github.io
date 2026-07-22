@@ -8,7 +8,7 @@
         /* Reset & Podstawy */
         /* {  box-sizing: border-box; margin: 0; padding: 0; }
         /* RWD dla urządzeń mobilnych */
-@media (max-width: 768px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 350px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
+@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 350px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
 
 
         body {
@@ -20,7 +20,7 @@
         }
 
         .container {
-            max-width: 768px;  margin: 0 auto;
+            max-width: 400px;  margin: 0 auto;
         }
 
         .author {position: absolute; top:0; left: calc(100% + 2px); margin-left: 2px;
@@ -92,7 +92,7 @@
             display: inline-block;
         }
 /* Galetria zdjęć */
-                 .photo-gallery img { width: 50%;
+                 .photo-gallery img { width: 100%;
             max-height: 400px;
             object-fit: cover;
             filter: grayscale(20%);
