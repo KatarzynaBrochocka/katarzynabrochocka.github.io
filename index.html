@@ -71,18 +71,18 @@
             border-bottom: 1px solid #1a1a1a;
         }
 
-        /* Ukrywanie i wyświetlanie odpowiedniego języka */
-        [lang="pl"], [lang="en"] {
-            display: none;
-        }
+/* Ukrywanie i wyświetlanie odpowiedniego języka tzn. ukrywanie nieaktywnego języka*/ /* Ukrywanie nieaktywnego języka */ 
+         [lang="pl"], [lang="en"] { display: none; } 
+                 html[lang="pl"] [lang="pl"] { display: block; } 
+                 html[lang="en"] [lang="en"] { display: block; } 
+                 /* RWD dla urządzeń mobilnych 
+@media (max-width: 768px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 350px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
+*/
+        [lang="pl"], [lang="en"] { display: block; span[lang="pl"]  }
 
-        html[lang="pl"] [lang="pl"] {
-            display: block;
-        }
+        html[lang="pl"] [lang="pl"] {display: block;}
 
-        html[lang="en"] [lang="en"] {
-            display: block;
-        }
+        html[lang="en"] [lang="en"] {display: block; }
 
         /* Dla elementów typu inline/inline-block, które mają język */
         html[lang="pl"] span[lang="pl"], 
