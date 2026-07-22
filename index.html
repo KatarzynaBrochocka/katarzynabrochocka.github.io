@@ -1,781 +1,415 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katarzyna Brochocka | Composer & Pianist</title>
-<style>
- /* Styl surowego, prestiżowego archiwum */ /* { box-sizing: border-box; margin: 0; padding: 0; } */
-<img src="foto1.jpg" filter: grayscale(20%) alt="Katarzyna Brochocka - fot. 1"> // <div class="lang-title2" > 
-body {
-font-family: 'Georgia', serif;
-background-color: #f9f9f6;
-color: #1a1a1a;
-line-height: 1.6;
-padding: 40px 20px;
-}
-.container {
-max-width: 768px;
-margin: 0 auto;
-}
-header {
- border-bottom: 1px solid #1a1a1a;
- padding-bottom: 20px;
- margin-bottom: 40x;
- display: flex;
- justify-content: space-between;
- align-items: flex-end;
-}
- h1 {
-font-size: 28px;
-font-weight: normal;
-letter-spacing: 3px;
-text-transform: uppercase;
-margin-top: 5px
-}
-.subtitle {
-font-family: sans-serif;
-font-size: 12px;
-letter-spacing: 3px;
-color: #666;
-text-transform: uppercase;
-margin-top: 5px;
-}
- /* przełącznik języków*/
- .lang-switcher {
-font-family: sans-serif;
-font-size: 12px;
-letter-spacing: 3px;
-color: #666;
-text-transform: uppercase;
-cursor: pointer;
-}
-  .lang-btn {
-transition: color 0.3s;
-}
-.lang-btn.active {
-font-weight: bold;
-color: #1a1a1a;
-border-bottom: 1px solid #1a1a1a;
-}
-/* Galeria zdjęć z pionowym podpisem po prawej stronie  <!-- SKRYPT PRZEŁĄCZANIA JĘZYKÓW --> */
-<script>
-function changeLang(lang) {
-  document.documentElement.lang = lang;
-  document.getElementById('btn-pl').classList.remove('active');
-  document.getElementById('btn-en').classList.remove('active');
-  document.getElementById('btn-' + lang).classList.add('active');
-}
-changeLang('pl');
-</script>
-.photo-gallery {
-margin-bottom: 50px;
-width: 100%;
-}
- changeLang('en');
-</script>
-.photo-gallery {
-margin-bottom: 50px;
-width: 100%;
-}
-.photo-wrapper {
-position: relative;
-display: block;
-width: 100%;
-/* Zostawiamy margines po prawej na pionowy podpis, żeby tekst nie nachodził na zdjęcie */
-padding-right: 30px; 
-}
-.photo-gallery img {
-width: 100%;
-max-height: 768px;
-object-fit: cover;
-filter: grayscale(40%);
-border: 1px solid #ddd;
-display: block;
-}
-.photo-credits {
-position: absolute;
-right: 5px;
-bottom: 0;
-transform: rotate(-90deg);
-transform-origin: bottom right;
-white-space: nowrap;
-font-family: 'Georgia', serif;
-font-style: italic;
-font-size: 11px;
-color: #800080;
-letter-spacing: 0;
-text-transform: rotate(-90deg); /* Brak kapitalików */
-}
- 
-  .autor{
-    position: absolute;
-    top:0;
-    left: calc(100% + 2px);
-    margin-left: 2px;
-  }
-
-/* Galeria 2 zdjęć */ /*
-.photo-gallery {
-display: grid;
-grid-template-columns: 2fr 1fr 1fr;
-gap: 15px;
-margin-bottom: 50px;
-}
-
-.photo-gallery img {
-width: 100%;
-height: 600px;
-object-fit: cover;
-filter: grayscale(20%);
-border: 1px solid #ddd;
-}
-
-.gallery-stack {
-display: flex;
-flex-direction: column;
-gap: 16px;
-}
-
-/* Dwukolumnowy biogram */
- /*.biography {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 50px;
-margin-bottom: 60px;
-font-size: 15px;
-text-align: justify;
-}
-.lang-title {
-font-family: sans-serif;
-font-size: 11px;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: #888;
-margin-bottom: 15px;
-border-bottom: 1px dashed #ccc;
-padding-bottom: 5px;
-}
- */
-.lang-title2 { 
-transform: rotate(90deg); text-orientation: mixed;
-font-family: sans-serif; font-size: 6px;
-letter-spacing: 1px; color: #8B3A00; 
- margin-bottom: 1px;	
-border-bottom: 1px 
-  display: flex; 
- gap: 2px flex-wrap: wrap;
- justify-content: center;
- margin: 2px 0;	
-    }
-}
-/* Sekcje merytoryczne */
- /* ! BIOGRAM PRZEŁĄCZANY -->*/ /*BIOGRAM i SEKCJE */
- .biography {
-margin-bottom: 60px;
-font-size: 15px;
-text-align: justify;
-}
-.section-title {
-font-family: sans-serif;
-font-size: 14px;
-letter-spacing: 3px;
-text-transform: uppercase;
-border-bottom: 1px solid #1a1a1a;
-padding-bottom: 5px;
-margin-bottom: 25px;
-margin-top: 50px;
-}
-.grid-blocks {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 40px;
-margin-bottom: 20px;
-}
-.block {
-margin-bottom: 20px;
-}
-.block h3 {
-font-size: 18px;
-font-weight: normal;
-margin-bottom: 10px;
-}
-.block p {
-font-size: 14px;
-color: #444;
-margin-bottom: 15px;
-}
-/* Przyciski i linki */
-.btn {
-display: inline-block;
-font-family: sans-serif;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-text-decoration: none;
-color: #1a1a1a;
-border: 1px solid #1a1a1a;
-padding: 8px 15px;
-transition: all 0.3s;
-}
-.btn: hover {
-background-color: #1a1a1a;
-color: #f9f9f6;
-
- /*Ukrywanie nieaktywnego języka */
- [lang="pl"], [lang="en"] {
-display: none;
-}
-html[lang="pl"] [lang="pl"] {
-display: block; 
- html[lang="en"]{ display: none;}
-}
-html[lang="en"] [lang="en"] {
-display: block; 
- html[lang="pl"]{ display: none;}
-}
-
-<section class="biography">
-<div lang="pl">
- <p><strong>Katarzyna Brochocka</strong> - kompozytorka, librecistka i pianistka. Autorka oper, pieśni, utworów orkiestrowych, kameralnych oraz muzyki teatralnej. Jej dzieła, wydawane od 2022 przez Universal Edition, są regularnie prezentowane w kraju i za granicą. Realizowała zamówienia m.in. Narodowego Forum Muzycki we Wrocławiu czy Filharmonii Warmińsko-Mazurskiej w Olsztynie. Jest laureatką międzynarodowych konkursów w Polsce, USA, Austrii, Włoszech i Anglii. W 2021 roku uzyskała stopień doktora sztuk muzycznych na Wydziale Kompozycji i Teorii Muzyki Uniwersytetu Muzycznego Fryderyka Chopina w Warszawie. Dyskografia artystki obejmuje albumy wydane nakładem wytwórni CD Accord: Brochocka, Weinberg: Double Bass Works (2015), Młoda mężatka / The Young Wife (2020) oraz Brochocka: Unquiet Heart (2025).<p>
- </div>
- <div lang="en">
- <p><strong>Katarzyna Brochocka</strong> - composer, librettist, and pianist. She is the author of operas, songs, orchestral and chamber works, and theater music. Her works, published by Universal Edition, are regularly presented in Poland and abroad. She has completed commissions from venues including National Forum of Music in Wrosłac and Warmia-Masuria Philharmonic in Olsztyn. She has won international competitions in Poland, the USA, Austria, Italy, and England. In 2021, she earned a Doctor of Musical Arts degree from the Department of Composition and Music Theory at the Fryderyk Chopin University of Music in Warsaw. Her discography includes three albums released on CD Accord: Brochocka, Weinberg: Double Bass Works (2015), Młoda mężatka / The Young Wife (2020), and Brochocka: Unquiet Heart (2025).<p>
- </div>
- </section>
-
- 
-.section-title {
-
-font-family: sans-serif;
-
-font-size: 14px;
-
-letter-spacing: 3px;
-
-text-transform: uppercase;
-
-border-bottom: 1px solid #1a1a1a;
-
-padding-bottom: 5px;
-
-margin-bottom: 25px;
-
-margin-top: 50px;
-
-}
-
-.grid-blocks {
-
-display: grid;
-
-grid-template-columns: 1fr 1fr;
-
-gap: 40px;
-
-}
-
-.block {
-
-margin-bottom: 20px;
-
-}
-
-.block h3 {
-
-font-size: 18px;
-
-font-weight: normal;
-
-margin-bottom: 10px;
-
-}
-
-.block p {
-
-font-size: 14px;
-
-color: #444;
-
-margin-bottom: 15px;
-
-}
-
-/* Przyciski i linki */
-
-.btn {
-
-display: inline-block;
-
-font-family: sans-serif;
-
-font-size: 11px;
-
-letter-spacing: 1px;
-
-text-transform: uppercase;
-
-text-decoration: none;
-
-color: #1a1a1a;
-
-border: 1px solid #1a1a1a;
-
-padding: 8px 15px;
-
-transition: all 0.3s;
-
-}
-
-.btn: hover {
-
-background-color: #1a1a1a;
-
-color: #f9f9f6;
-
-}
-
-/* Wideo i Audio */
-
-.media-container {
-
-margin-bottom: 20px;
-
-background: #f0f0ec;
-
-padding: 15px;
-
-border: 1px solid #e0e0dc;
-
-}
-
-iframe, video {
-
-width: 60%;
-
-aspect-ratio: 16/9;
-
-border: none;
-
-}
-
-/* Filtr kontaktowy */
-
-.contact-box {
-
-background-color: #1a1a1a;
-
-color: #f9f9f6;
-
-padding: 40px;
-
-margin-top: 60px;
-
-}
-
-.contact-box h2 {
-
-font-weight: normal;
-
-letter-spacing: 2px;
-
-margin-bottom: 20px;
-
-font-size: 20px;
-
-}
-
-.contact-box p {
-
-font-size: 14px;
-
-color: #ccc;
-
-max-width: 600px;
-
-margin-bottom: 20px;
-
-}
-
-.contact-email {
-
-font-family: sans-serif;
-
-font-size: 18px;
-
-letter-spacing: 1px;
-
-color: #fff;
-
-text-decoration: none;
-
-border-bottom: 1px solid #fff;
-
-}
-
-@media (max-width: 680px) {
-
-.biography, .grid-blocks, .photo-gallery { grid-template-columns: 1fr; }
-
-.photo-gallery img { height: auto !important; }
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katarzyna Brochocka | Composer & Pianist</title>
+    <style>
+        /* Reset & Podstawy */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f9f6;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        /* Nagłówek */
+        header {
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: normal;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .subtitle {
+            font-family: sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #666;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* Przełącznik języków */
+        .lang-switcher {
+            font-family: sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #666;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .lang-btn {
+            transition: color 0.3s;
+            padding: 2px 5px;
+        }
+
+        .lang-btn.active {
+            font-weight: bold;
+            color: #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        /* Ukrywanie i wyświetlanie odpowiedniego języka */
+        [lang="pl"], [lang="en"] {
+            display: none;
+        }
+
+        html[lang="pl"] [lang="pl"] {
+            display: block;
+        }
+
+        html[lang="en"] [lang="en"] {
+            display: block;
+        }
+
+        /* Dla elementów typu inline/inline-block, które mają język */
+        html[lang="pl"] span[lang="pl"], 
+        html[lang="pl"] div.subtitle[lang="pl"] {
+            display: inline-block;
+        }
+
+        html[lang="en"] span[lang="en"], 
+        html[lang="en"] div.subtitle[lang="en"] {
+            display: inline-block;
+        }
+
+        /* Galeria zdjęć */
+        .photo-gallery {
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .photo-wrapper {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-right: 30px; 
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            filter: grayscale(20%);
+            border: 1px solid #ddd;
+            display: block;
+        }
+
+        .photo-credits {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            transform: rotate(-90deg);
+            transform-origin: right bottom;
+            white-space: nowrap;
+            font-family: sans-serif;
+            font-size: 10px;
+            color: #8B3A00;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Biogram i sekcje */
+        .biography {
+            margin-bottom: 60px;
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .section-title {
+            font-family: sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            margin-top: 50px;
+        }
+
+        .grid-blocks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .block {
+            margin-bottom: 20px;
+        }
+
+        .block h3 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .block p {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        /* Przyciski */
+        .btn {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #1a1a1a;
+            border: 1px solid #1a1a1a;
+            padding: 8px 15px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1a1a1a;
+            color: #f9f9f6;
+        }
+
+        /* Wideo / Audio */
+        .media-container {
+            background: #f0f0ec;
+            padding: 15px;
+            border: 1px solid #e0e0dc;
+            margin-bottom: 10px;
+        }
+
+        .media-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+
+        /* Kontakt */
+        .contact-box {
+            background-color: #1a1a1a;
+            color: #f9f9f6;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        .contact-box h2 {
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .contact-box p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .grid-blocks { 
+                grid-template-columns: 1fr; 
+                gap: 20px; 
+            }
+            .photo-wrapper { 
+                padding-right: 0; 
+            }
+            .photo-credits { 
+                position: relative; 
+                transform: none; 
+                right: auto; 
+                bottom: auto; 
+                text-align: right; 
+                display: block; 
+                margin-top: 5px; 
+            }
+        }
+    </style>
 </head>
-
 <body>
-
 
 <div class="container">
 
+    <!-- NAGŁÓWEK -->
+    <header>
+        <div>
+            <h1>Katarzyna Brochocka</h1>
+            <div class="subtitle" lang="pl">Kompozytorka & Pianistka</div>
+            <div class="subtitle" lang="en">Composer & Pianist</div>
+        </div>
+        <div class="lang-switcher">
+            <span id="btn-pl" class="lang-btn active" onclick="changeLang('pl')">PL</span> | 
+            <span id="btn-en" class="lang-btn" onclick="changeLang('en')">EN</span>
+        </div>
+    </header>
 
-<header>
+    <!-- ZDJĘCIE GŁÓWNE -->
+    <section class="photo-gallery">
+        <div class="photo-wrapper">
+            <img src="foto1.jpg" alt="Katarzyna Brochocka">
+            <div class="photo-credits">fot. Katarzyna Strzelecka</div>
+        </div>
+    </section>
 
-<div>
+    <!-- BIOGRAM -->
+    <section class="biography">
+        <div lang="pl">
+            <p><strong>Katarzyna Brochocka</strong> – kompozytorka, librecistka i pianistka. Autorka oper, pieśni, utworów orkiestrowych, kameralnych oraz muzyki teatralnej. Jej dzieła, wydawane od 2022 roku przez Universal Edition, są regularnie prezentowane w kraju i za granicą. Realizowała zamówienia m.in. Narodowego Forum Muzyki we Wrocławiu oraz Filharmonii Warmińsko-Mazurskiej w Olsztynie. Jest laureatką międzynarodowych konkursów w Polsce, USA, Austrii, Włoszech i Anglii. W 2021 roku uzyskała stopień doktora sztuk muzycznych na Wydziale Kompozycji i Teorii Muzyki Uniwersytetu Muzycznego Fryderyka Chopina w Warszawie. Dyskografia artystki obejmuje trzy albumy wydane nakładem wytwórni CD Accord: <em>Brochocka, Weinberg: Double Bass Works</em> (2015), <em>Młoda mężatka / The Young Wife</em> (2020) oraz <em>Brochocka: Unquiet Heart</em> (2025).</p>
+        </div>
+        <div lang="en">
+            <p><strong>Katarzyna Brochocka</strong> – composer, librettist, and pianist. She is the author of operas, songs, orchestral and chamber works, and theater music. Her works, published by Universal Edition, are regularly presented in Poland and abroad. She has completed commissions from venues including the National Forum of Music in Wrocław and the Warmia-Masuria Philharmonic in Olsztyn. She has won international competitions in Poland, the USA, Austria, Italy, and England. In 2021, she earned a Doctor of Musical Arts degree from the Department of Composition and Music Theory at the Fryderyk Chopin University of Music in Warsaw. Her discography includes three albums released on CD Accord: <em>Brochocka, Weinberg: Double Bass Works</em> (2015), <em>Młoda mężatka / The Young Wife</em> (2020), and <em>Brochocka: Unquiet Heart</em> (2025).</p>
+        </div>
+    </section>
 
-<h1>Katarzyna Brochocka</h1>
+    <!-- FILARY PUBLIKACYJNE -->
+    <div class="grid-blocks">
+        <div>
+            <div class="section-title">Scores & Rentals</div>
+            <div class="block">
+                <h3>Universal Edition (Wiedeń)</h3>
+                <p lang="pl">Oficjalny katalog dzieł – w tym utwory wielkoorkiestrowe, operowe oraz kameralne – jest zarządzany przez Universal Edition. Zakup partytur PDF/Print oraz wypożyczenia materiałów koncertowych dla filharmonii i teatrów realizowane są bezpośrednio przez platformę wydawcy.</p>
+                <p lang="en">The official catalogue of works – including grand orchestral, opera, and chamber pieces – is managed by Universal Edition. Purchasing PDF/Print scores and renting concert materials for philharmonics and theaters is done directly through the publisher's platform.</p>
+                <a href="https://www.universaledition.com/Personen/Katarzyna-Brochocka/" class="btn" target="_blank">Browse Catalogue</a>
+            </div>
+        </div>
 
-<div class="subtitle">Composer & Pianist</div>
+        <div>
+            <div class="section-title">Discography & Distribution</div>
+            <div class="block">
+                <h3>NAXOS & Universal Music</h3>
+                <p lang="pl">Autorskie nagrania płytowe kompozytorki podlegają oficjalnej dystrybucji globalnej (NAXOS) oraz krajowej (Universal Music Poland). Dostępne w sprzedaży fizycznej oraz w międzynarodowych bazach streamingowych.</p>
+                <p lang="en">The composer's original recordings are under official global distribution (NAXOS) and national distribution (Universal Music Poland). Available in physical sales and on international streaming platforms.</p>
+                <a href="https://open.spotify.com/album/6xtc12Tnviob7C8zYVUBPJ" class="btn" target="_blank">Listen Worldwide</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEKCJA VIDEO / AUDIO -->
+    <div class="section-title" lang="pl">Wybrane utwory / Media</div>
+    <div class="section-title" lang="en">Selected Works / Media</div>
+
+    <div class="grid-blocks">
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/chXyVZwfiIQ" title="Katarzyna Brochocka - Vocal Music"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:10px;">Muzyka wokalna / Kiedy czas się kończy (Fragment)</div>
+            <div class="subtitle" lang="en" style="margin-top:10px;">Vocal music / When Time Ends (Excerpt)</div>
+        </div>
+
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/ysEpnttHBxE" title="Katarzyna Brochocka - Piano Solo"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:10px;">Fortepian solo / Rondo Perpetuo</div>
+            <div class="subtitle" lang="en" style="margin-top:10px;">Piano solo / Rondo Perpetuo</div>
+        </div>
+
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/zikrURY9tFU" title="Katarzyna Brochocka - Prayer"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:10px;">Fortepian i kontrabas / Prayer</div>
+            <div class="subtitle" lang="en" style="margin-top:10px;">Piano & Double Bass / Prayer</div>
+        </div>
+
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/0w_HHd544DU" title="Katarzyna Brochocka - Opera"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:10px;">Opera / Do nieba</div>
+            <div class="subtitle" lang="en" style="margin-top:10px;">Opera / To Heaven</div>
+        </div>
+    </div>
+
+    <!-- SEKCJA KONTAKTOWA -->
+    <section class="contact-box">
+        <div lang="pl">
+            <h2>Professional Inquiries & Commissions</h2>
+            <p>Zapraszam do kontaktu w sprawie zamówień oraz wykonań moich utworów. Wszystkie zamówienia kompozytorskie realizowane są na podstawie oficjalnych umów. Zlecenia non-profit nie są rozpatrywane.</p>
+        </div>
+        <div lang="en">
+            <h2>Professional Inquiries & Commissions</h2>
+            <p>Feel free to contact me regarding commissions and performances of my music. All composition commissions are carried out under official contracts. Non-profit requests are not considered.</p>
+        </div>
+
+        <!-- Przycisk Koperty -->
+        <div style="text-align: center; margin-top: 30px;">
+            <button id="openContactBtn" title="Kontakt" style="background: none; border: 1px solid #f9f9f6; color: #f9f9f6; font-size: 32px; width: 70px; height: 70px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                ✉
+            </button>
+        </div>
+    </section>
 
 </div>
 
-<div class="subtitle">PL | EN</div>
-
-</header>
-
-<img src="foto1.jpg" filter: grayscale(10%) scale=1 alt="Katarzyna Brochocka - fot. 1">
- 
-<div class="lang-title2" >pic. Katarzyna Strzelecka"</div>
-<!-- Główne duże zdjęcie -->
- 
-<section class="photo-gallery">
-
-
-</div>
-</section>
-  
-< /*Ukrywanie nieaktywnego języka */
- 
- </section> [lang="pl"], [lang="en"] {
-display: none;
-}
-html[lang="pl"] [lang="pl"] {
-display: block;
-}
-html[lang="en"] [lang="en"] {
-display: block;
-}
- /*!-- BIOGRAM DWUJĘZYCZNY -->*/
-
- 
-<section class="biography">
-
-<div>
-
-<div class="lang-title">Polski</div>
-
-<p><strong>Katarzyna Brochocka</strong> – kompozytorka, librecistka i pianistka. Autorka oper, pieśni, utworów orkiestrowych, kameralnych oraz muzyki teatralnej. Jej dzieła, wydawane od 2022 roku przez Universal Edition, są regularnie prezentowane w kraju i za granicą. Realizowała zamówienia m.in. Narodowego Forum Muzyki we Wrocławiu czy Filharmonii Warmińsko-Mazurskiej w Olsztynie. Jest laureatką międzynarodowych konkursów w Polsce, USA, Austrii, Włoszech i Anglii. W 2021 roku uzyskała stopień doktora sztuk muzycznych na Wydziale Kompozycji i Teorii Muzyki Uniwersytetu Muzycznego Fryderyka Chopina w Warszawie. Dyskografia artystki obejmuje trzy albumy wydane nakładem wytwórni CD Accord: Brochocka, Weinberg: Double Bass Works (2015), Młoda mężatka / The Young Wife (2020) oraz Brochocka: Unquiet Heart (2025).</p>
-
+<!-- FORMULARZ MODALNY (WYSKAKUJĄCY) -->
+<div id="contactModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(6px); overflow-y: auto;">
+    <div style="background: #1a1a1a; margin: 8% auto; padding: 40px 30px; border: 1px solid #333; max-width: 550px; width: 90%; position: relative;">
+        <button id="closeContactBtn" style="position: absolute; top: 15px; right: 20px; background: none; border: none; color: #888; font-size: 28px; cursor: pointer;">&times;</button>
+        <h2 style="color: #f9f9f6; font-family: sans-serif; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px;">Professional Inquiries</h2>
+        
+        <form action="https://formsubmit.co/katka.brochocka@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" name="name" placeholder="Imię i nazwisko / Instytucja" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff;">
+            <input type="email" name="_replyto" placeholder="Twój adres e-mail do kontaktu" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff;">
+            <input type="text" name="_subject" placeholder="Temat wiadomości" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff;">
+            <textarea name="message" placeholder="Treść wiadomości..." rows="5" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff; resize: vertical;"></textarea>
+            <button type="submit" style="background: #f9f9f6; color: #1a1a1a; cursor: pointer; border: none; font-weight: bold; padding: 14px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-top: 10px;">
+                Wyślij wiadomość
+            </button>
+        </form>
+    </div>
 </div>
 
-<div>
-
-<div class="lang-title">English</div>
-
-<p><strong>Katarzyna Brochocka</strong> – composer, librettist, and pianist. She is the author of operas, songs, orchestral and chamber works, and theater music. Her works, published by Universal Edition, are regularly presented in Poland and abroad. She has completed commissions from venues including the National Forum of Music in Wrocław and the Warmia-Masuria Philharmonic in Olsztyn. She has won international competitions in Poland, the USA, Austria, Italy, and England. In 2021, she earned a Doctor of Musical Arts degree from the Department of Composition and Music Theory at the Fryderyk Chopin University of Music in Warsaw. Her discography includes three albums released on CD Accord: Brochocka, Weinberg: Double Bass Works (2015), Młoda mężatka / The Young Wife (2020), and Brochocka: Unquiet Heart (2025).</p>
-
-</div>
-
-</section>
-
- <!-- SKRYPT PRZEŁĄCZANIA JĘZYKÓW -->
+<!-- SKRYPTY LOGIKI -->
 <script>
+// Przełączanie języków
 function changeLang(lang) {
-  document.documentElement.lang = lang;
-  document.getElementById('btn-pl').classList.remove('active');
-  document.getElementById('btn-en').classList.remove('active');
-  document.getElementById('btn-' + lang).classList.add('active');
-}
-changeLang('pl');
-</script>
-
-<!-- FILARY PUBLIKACYJNE (Fakty, które odcinają amatorów) -->
-
-<div class="grid-blocks">
-
-<div>
-
-<div class="section-title">Scores & Rentals</div>
-
-<div class="block">
-
-<h3>Universal Edition (Wiedeń)</h3>
-
-<p>Oficjalny katalog dzieł – w tym utwory wielkoorkiestrowe, operowe oraz kameralne – jest zarządzany przez Universal Edition. Zakup partytur PDF/Print oraz wypożyczenia materiałów koncertowych dla filharmonii i teatrów realizowane są bezpośrednio przez platformę wydawcy.</p>
-
-<a href="https://www.universaledition.com/Personen/Katarzyna-Brochocka/" target="_blank">Browse Catalogue</a>
-
-</div>
-
-</div>
-
-<div>
-
-<div class="section-title">Discography & Distribution</div>
-
-<div class="block">
-
-<h3>NAXOS & Universal Music</h3>
-
-<p>Autorskie nagrania płytowe kompozytorki podlegają oficjalnej dystrybucji globalnej (NAXOS) oraz krajowej (Universal Music Poland). Dostępne w sprzedaży fizycznej oraz w międzynarodowych bazach streamingowych.</p>
-
-<a href="https://open.spotify.com/album/6xtc12Tnviob7C8zYVUBPJ" class="btn" target="_blank">Listen Worldwide</a> 
-
-</div>
-
-</div>
-
-</div>
-
-<!-- SEKCJA VIDEO / AUDIO -->
-</section>
-<div class=photo-gallery {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 15px;
-margin-bottom: 50px;
+    document.documentElement.lang = lang;
+    document.getElementById('btn-pl').classList.remove('active');
+    document.getElementById('btn-en').classList.remove('active');
+    document.getElementById('btn-' + lang).classList.add('active');
 }
 
-<div class="section-title">Selected Works / Media</div>
-<div class="grid-blocks">
-<div class="media-container">
-<iframe src="https://www.youtube.com/embed/chXyVZwfiIQ" title="Katarzyna Brochocka Work"></iframe>
-<div class="subtitle" style="margin-top:10px;">Muzyka wokalna / Kiedy czas się kończy - When Time Ends
-  (Fragment)</div>
-</div>
-<div class="media-container">
-<iframe src="https://www.youtube.com/embed/ysEpnttHBxE" title="Katarzyna Brochocka Work2"></iframe>
-<div class="subtitle" style="margin-top:10px;">fortepian solo / Rondo Perpetuo 
-  (Nagranie)</div>
-</div>
-  </div>
-  <div class="grid-blocks">
-<div class="media-container">
-<iframe src="https://www.youtube.com/embed/zikrURY9tFU" title="Katarzyna Brochocka Work3"></iframe>
-<div class="subtitle" style="margin-top:10px;">fortepian i kontrabas / Prayer
-  (Nagranie)</div>
-</div>
-<div class="media-container">
-<iframe src="https://www.youtube.com/embed/0w_HHd544DU" title="Katarzyna Brochocka Work4"></iframe>
-<div class="subtitle" style="margin-top:10px;">opera / Do nieba - To Heaven
-  (Nagranie)</div>
-</div>
-</div>
-</div>
-
- <!-- SEKCJA Z SAMĄ KOPERTĄ (STYL BENEDYKTYŃSKI) i Januszowy wcześńiej--> 
-  <section class="contact-box">
-<h2>Professional Inquiries & Commissions</h2>
-<p>Zapraszam do kontaktu w sprawie zamówień oraz wykonań moich utworów. WAŻNE: podczas wypełniania formularza proszę podać adres e-mail zarówno w odpowiedniej rubryce, jak i w treści wiadomości.</p>
-<p>Feel free to contact me regarding commissions and performances of my music. IMPORTANT: When filling out the form, please include your email address both in the designated field and in the body of the message.</p>
-<p style="margin-top: 30px;">
-</p>
-</section>
-</div>
-</body>
-</html>
-<section class="contact-box">
-
-<div style="text-align: center; margin: 70px 0 90px 0;">
-
-<button id="openContactBtn" title="Kontakt" style="background: none; border: 1px solid #f9f9f6; color: #f9f9f6; font-size: 32px; width: 70px; height: 70px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0; line-height: 1;">
-✉
-</button>
-</div>
-<!-- UKRYTE OKIENKO Z FORMULARZEM (Wyskakuje po kliknięciu w kopertę) -->
-<div id="contactModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); overflow-y: auto;">
-<!-- Zawartość okienka -->
-<div style="background: #1a1a1a; margin: 8% auto; padding: 40px 30px 30px 30px; border: 1px solid #333; max-width: 550px; width: 90%; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.7);">
-<!-- Przycisk zamknięcia okienka (Krzyżyk) -->
-<button id="closeContactBtn" style="position: absolute; top: 15px; right: 20px; background: none; border: none; color: #888; font-size: 28px; cursor: pointer; line-height: 1; transition: color 0.2s;">&times;</button>
-<h2 style="color: #f9f9f6; margin-top: 0; font-family: sans-serif; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px;">Professional Inquiries & Commissions</h2>
-<p style="color: #aaa; font-size: 13px; line-height: 1.6; margin-bottom: 25px; font-family: sans-serif;">Wszystkie zamówienia kompozytorskie (muzyka autonomiczna, sceniczna, inna) realizowane są wyłącznie na podstawie oficjalnych umów, uwzględniających profesjonalne stawki autorskie. Zlecenia non-profit nie są rozpatrywane.</p>
-<!-- Formularz wysyłkowy -->
-<!-- PAMIĘTAJ: Jak założysz nowy e-mail, wpisz go w miejsce poniższego adresu! -->
-<form action="https://formsubmit.co/katka.brochocka@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-<input type="text" name="name" placeholder="Imię i nazwisko / Instytucja zamawiająca" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff; border-radius: 0;">
-<input type="email" name="_replyto" placeholder="Twój adres e-mail do kontaktu" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff; border-radius: 0;">
-<input type="text" name="_subject" placeholder="Temat wiadomości" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff; border-radius: 0;">
-<textarea name="message" placeholder="Treść wiadomości (Szczegóły projektu, planowany skład, sugerowane terminy...)" rows="5" required style="padding: 12px; font-family: sans-serif; font-size: 14px; border: 1px solid #444; background: #222; color: #fff; resize: vertical; min-height: 100px; border-radius: 0;"></textarea>
-<button type="submit" style="background: #f9f9f6; color: #1a1a1a; cursor: pointer; border: none; font-weight: bold; padding: 14px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-top: 10px; transition: background 0.2s;">
-
-Wyślij oficjalne zapytanie
-</button>
-</form>
-</div>
-</div>
-
-<!-- LOGIKA DZIAŁANIA OKIENKA (Otwieranie i zamykanie) -->
-<script>
+// Obsługa okna modalnego (Kontakt)
 const modal = document.getElementById('contactModal');
 const openBtn = document.getElementById('openContactBtn');
 const closeBtn = document.getElementById('closeContactBtn');
 
-// Efekt podświetlenia po najechaniu myszką na kopertę
 openBtn.onmouseover = function() { this.style.background = '#f9f9f6'; this.style.color = '#1a1a1a'; }
 openBtn.onmouseout = function() { this.style.background = 'none'; this.style.color = '#f9f9f6'; }
 
-// Otwieranie okienka
 openBtn.onclick = function() {
-modal.style.display = 'block';
-document.body.style.overflow = 'hidden';
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
 }
 
-// Zamykanie okienka krzyżykiem
 closeBtn.onclick = function() {
-modal.style.display = 'none';
-document.body.style.overflow = 'auto';
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
-// Zamykanie okienka kliknięciem w tło
 window.onclick = function(event) {
-if (event.target == modal) {
-modal.style.display = 'none';
-document.body.style.overflow = 'auto';
+    if (event.target == modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 }
-
-}
-</script>
- 
-<!-- FILTR ANTY-JANUSZOWY (Kontakt) -->
-</div>
-
-</body>
-
-</html> 
-</section 
-<!--/* Ukrywanie nieaktywnego języka */ -->
-</html[lang="pl"], [lang="en"] {
-display: none;
-}
-</html[lang="pl"] [lang="pl"] {
-display: block;
-}
-</html[lang="en"] [lang="en"] {
-display: block;
-}
-}
-<!--- RWD dla urządzeń mobilnych --->
-<section class=
-@media (max-width: 768px) {
-.grid-blocks { grid-template-columns: 1fr; gap: 20px; }
-.photo-gallery img { max-height: 350px; }
-.photo-wrapper { padding-right: 0; margin-bottom: 25px; }
-.photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; }
-}
-</style>
-</head>
-<body>
-
-<div class="container">
-
-<header>
-<div>
-<h1>Katarzyna Brochocka</h1>
-<div class="subtitle" lang="pl">Kompozytorka & Pianistka</div>
-<div class="subtitle" lang="en">Composer & Pianist</div>
-</div>
-<div class="lang-switcher">
-<span id="btn-pl" class="lang-btn active" onclick="changeLang('pl')">PL</span> | 
-<span id="btn-en" class="lang-btn" onclick="changeLang('en')">EN</span>
-</div>
-</header>
-
-<!-- GALERIA ZDJĘĆ Z PIONOWYM PODPISEM -->
-<section class="photo-gallery">
-<div class="photo-wrapper">
-<img src="foto1.jpg" alt="Katarzyna Brochocka">
-<div class="photo-credits": lang-title2>pic. Katarzyna Strzelecka</div> 
-</div>
-</section>
-  
-<!-- BIOGRAM PRZEŁĄCZANY -->
-<section class="biography">
-<div lang="pl">
-<p><strong>Katarzyna Brochocka</strong> – kompozytorka, librecistka i pianistka. Autorka oper, pieśni, utworów orkiestrowych, kameralnych oraz muzyki teatralnej. Jej dzieła, wydawane od 2022 roku przez Universal Edition, są regularnie prezentowane w kraju i za granicą. Realizowała zamówienia m.in. Narodowego Forum Muzyki we Wrocławiu oraz Filharmonii Warmińsko-Mazurskiej w Olsztynie. Jest laureatką międzynarodowych konkursów w Polsce, USA, Austrii, Włoszech i Anglii. W 2021 roku uzyskała stopień doktora sztuk muzycznych na Wydziale Kompozycji i Teorii Muzyki Uniwersytetu Muzycznego Fryderyka Chopina w Warszawie. Dyskografia artystki obejmuje three albumy wydane nakładem wytwórni CD Accord: Brochocka, Weinberg: Double Bass Works (2015), Młoda mężatka / The Young Wife (2020) oraz Brochocka: Unquiet Heart (2025).</p>
-</div>
-<div lang="en">
-<p><strong>Katarzyna Brochocka</strong> – composer, librettist, and pianist. She is the author of operas, songs, orchestral and chamber works, and theater music. Her works, published by Universal Edition, are regularly presented in Poland and abroad. She has completed commissions from venues including the National Forum of Music in Wrocław and the Warmia-Masuria Philharmonic in Olsztyn. She has won international competitions in Poland, the USA, Austria, Italy, and England. In 2021, she earned a Doctor of Musical Arts degree from the Department of Composition and Music Theory at the Fryderyk Chopin University of Music in Warsaw. Her discography includes three albums released on CD Accord: Brochocka, Weinberg: Double Bass Works (2015), Młoda mężatka / The Young Wife (2020), and Brochocka: Unquiet Heart (2025).</p>
-</div>
-</section>
-
-<!-- KATALOG I DYSTRYBUCJA -->
-<div class="grid-blocks">
-<div>
-<div class="section-title">Scores & Rentals</div>
-<div class="block">
-<h3>Universal Edition (Wiedeń)</h3>
-<p lang="pl">Oficjalny katalog dzieł – w tym utwory wielkoorkiestrowe, operowe oraz kameralne – jest zarządzany przez Universal Edition. Zakup partytur PDF/Print oraz wypożyczenia materiałów koncertowych dla filharmonii i teatrów realizowane są bezpośrednio przez platformę wydawcy.</p>
-<p lang="en">The official catalogue of works – including grand orchestral, opera, and chamber pieces – is managed by Universal Edition. Purchasing PDF/Print scores and renting concert materials for philharmonics and theaters is done directly through the publisher's platform.</p>
-<a href="https://universaledition.com" class="btn" target="_blank">Browse Catalogue</a>
-</div>
-</div>
-
-<div>
-<div class="section-title">Discography & Distribution</div>
-<div class="block">
-<h3>NAXOS & Universal Music</h3>
-<p lang="pl">Autorskie nagrania płytowe kompozytorki podlegają oficjalnej dystrybucji globalnej (NAXOS) oraz krajowej (Universal Music Poland). Dostępne w sprzedaży fizycznej oraz w międzynarodowych bazach streamingowych.</p>
-<p lang="en">The composer's original recordings are under official global distribution (NAXOS) and national distribution (Universal Music Poland). Available in physical sales and on international streaming platforms.</p>
-<a href="https://spotify.com" class="btn" target="_blank">Listen Worldwide</a> 
-</div>
-</div>
-</div>
-  
-<!-- SEKCJA VIDEO / AUDIO -->
-<div class="section-title" lang="pl">Wybrane utwory / Media</div>
-<div class="section-title" lang="en">Selected Works / Media</div>
-
-<div class="grid-blocks">
-<div class="media-container">
-<iframe src="https://youtube.com/embed/ABgLjUm48i4" title="Katarzyna Brochocka Work"></iframe>
-<div class="subtitle" lang="pl" style="margin-top:10px;">Muzyka wokalna / Szczęśliwy ogród życia (Fragment)</div>
-<div class="subtitle" lang="en" style="margin-top:10px;">Vocal music / Happy Garden of Life (Excerpt)</div>
-</div>
-
-<div class="media-container">
-<iframe src="https://www.youtube.com/embed/64QWKBO1HMw" title="Katarzyna Brochocka Work5"></iframe>
-<div class="subtitle" lang="pl" style="margin-top:10px;">Fortepian solo / Sonata fortepianowa nr2 cz2</div>
-<div class="subtitle" lang="en" style="margin-top:10px;">Piano solo / 2nd Piano Sonata mvt2 (Recording)</div>
-</div>
-</div>
-
-<!-- SEKCJA KONTAKTOWA -->
-<section class="contact-box">
-<div lang="pl">
-<h2>Kontakt</h2>
-<p>W sprawach dotyczących zamówień kompozytorskich, współpracy artystycznej oraz praw wykonawczych prosimy o kontakt mailowy.</p>
-</div>
-<div lang="en">
-<h2>Contact</h2>
-<p>For inquiries regarding music commissions, artistic collaboration, and performance rights, please contact via email.</p>
-</div>
-<a href="mailto:kontakt@katarzynabrochocka.com" class="contact-email">kontakt@katarzynabrochocka.com</a>
-</section>
-
-</div>
-
-<!-- SKRYPT PRZEŁĄCZANIA JĘZYKÓW -->
-<script>
-function changeLang(lang) {
-  document.documentElement.lang = lang;
-  document.getElementById('btn-pl').classList.remove('active');
-  document.getElementById('btn-en').classList.remove('active');
-  document.getElementById('btn-' + lang).classList.add('active');
-}
-changeLang('pl');
 </script>
 
 </body>
