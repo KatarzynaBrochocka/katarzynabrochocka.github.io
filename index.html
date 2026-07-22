@@ -151,7 +151,41 @@
             margin-bottom: 25px;
             margin-top: 50px;
         }
-
+.subtitle {
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #666;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.lang-title {
+    font-family: sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+.lang-title2 { 
+transform: rotate(90deg); 
+  text-orientation: mixed;
+font-family: sans-serif;
+font-size: 6px;
+letter-spacing: 1px;
+color: #888;
+  margin-bottom: 1px;	
+border-bottom: 1px 
+      display: flex;
+      gap: 2px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2x 0;
+    }
+}                                     
+                                     
         .grid-blocks {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -258,25 +292,26 @@
     <header>
         <div>
             <h1>Katarzyna Brochocka</h1>
-            <div class="subtitle" lang="pl">Kompozytorka & Pianistka</div>
-            <div class="subtitle" lang="en">Composer & Pianist</div>
+            
         </div>
         <div class="lang-switcher">
             <span id="btn-pl" class="lang-btn active" onclick="changeLang('pl')">PL</span> | 
             <span id="btn-en" class="lang-btn" onclick="changeLang('en')">EN</span>
         </div>
+        <div class="subtitle" lang="pl">Kompozytorka & Pianistka</div>
+            <div class="subtitle" lang="en">Composer & Pianist</div>
     </header>
 
     <!-- ZDJĘCIE GŁÓWNE -->
     <section class="photo-gallery">
         <div class="photo-wrapper">
             
-            <img src="foto1.jpg" size: 50%; alt="Katarzyna Brochocka">
+            <img src="foto1.jpg" size: 30%; alt="Katarzyna Brochocka">
             <div lang="pl">
-            <div class="photo-credits">fot. Katarzyna Strzelecka</div>
+            <div class="photo-credits":lang-title2>fot. Katarzyna Strzelecka</div>
                 </div>
             <div lang="en">
-            <div class="photo-credits">pic. Katarzyna Strzelecka</div>
+            <div class="photo-credits":lang-title>pic. Katarzyna Strzelecka</div>
                 </div>
         </div>
     </section>
