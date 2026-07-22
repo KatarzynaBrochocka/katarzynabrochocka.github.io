@@ -6,7 +6,10 @@
     <title>Katarzyna Brochocka | Composer & Pianist</title>
     <style>
         /* Reset & Podstawy */
-        * {  box-sizing: border-box; margin: 0; padding: 0; }
+        /* {  box-sizing: border-box; margin: 0; padding: 0; }
+        /* RWD dla urządzeń mobilnych */
+@media (max-width: 768px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 350px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
+
 
         body {
             font-family: 'Georgia', serif;
@@ -73,12 +76,6 @@
 
 /* Ukrywanie i wyświetlanie odpowiedniego języka tzn. ukrywanie nieaktywnego języka*/ /* Ukrywanie nieaktywnego języka */ 
          [lang="pl"], [lang="en"] { display: none; } 
-                 html[lang="pl"] [lang="pl"] { display: block; } 
-                 html[lang="en"] [lang="en"] { display: block; } 
-                 /* RWD dla urządzeń mobilnych 
-@media (max-width: 768px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 350px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
-*/
-        [lang="pl"], [lang="en"] { display: block; span[lang="pl"]  }
 
         html[lang="pl"] [lang="pl"] {display: block;}
 
@@ -131,7 +128,7 @@
             transform-origin: right bottom;
             white-space: nowrap;
             font-family: sans-serif;
-            font-size: 10px;
+            font-size: 6px;
             color: #8B3A00;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -273,8 +270,14 @@
     <!-- ZDJĘCIE GŁÓWNE -->
     <section class="photo-gallery">
         <div class="photo-wrapper">
+            
             <img src="foto1.jpg" size: 50%; alt="Katarzyna Brochocka">
+            <div lang="pl">
             <div class="photo-credits">fot. Katarzyna Strzelecka</div>
+                </div>
+            <div lang="en">
+            <div class="photo-credits">pic. Katarzyna Strzelecka</div>
+                </div>
         </div>
     </section>
 
