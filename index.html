@@ -68,7 +68,7 @@
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
         }
         
-@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 350px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
+@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 300px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
 
         body {
             font-family: 'Georgia', serif;
@@ -93,7 +93,7 @@
             justify-content: space-between;
             align-items: flex-end;
         }
-/*
+/
         h1 {
             font-size: 28px;
             font-weight: normal;
@@ -112,7 +112,7 @@
         }
 
             /*tu było zjęcie nr 1*/                         
-        /* Przełącznik języków 
+        /* Przełącznik języków */
         .lang-switcher {
             font-family: sans-serif;
             font-size: 12px;
@@ -133,14 +133,14 @@
             border-bottom: 1px solid #1a1a1a;
         }
 
-/* Ukrywanie i wyświetlanie odpowiedniego języka tzn. ukrywanie nieaktywnego języka*/ /* Ukrywanie nieaktywnego języka 
+/* Ukrywanie i wyświetlanie odpowiedniego języka tzn. ukrywanie nieaktywnego języka*/ /* Ukrywanie nieaktywnego języka */
          [lang="pl"], [lang="en"] { display: none; } 
 
         html[lang="pl"] [lang="pl"] {display: block;}
 
         html[lang="en"] [lang="en"] {display: block; }
 
-        /* Dla elementów typu inline/inline-block, które mają język 
+        /* Dla elementów typu inline/inline-block, które mają język */
         html[lang="pl"] span[lang="pl"], 
         html[lang="pl"] div.subtitle[lang="pl"] {
             display: inline-block;
@@ -232,9 +232,8 @@
             .profile-photo { width: 180px; height: 180px; }
             .language-switcher { top: 20px; right: 20px; }
         }
-    </style>
-</head>
----->/* Galetria zdjęć */
+
+                 /* Galetria zdjęć */
                  .photo-gallery img { width: 50%;
             max-height: 768px;
             object-fit: cover;
@@ -587,18 +586,18 @@ openBtn.onmouseover = function() { this.style.background = '#f9f9f6'; this.style
 openBtn.onmouseout = function() { this.style.background = 'none'; this.style.color = '#f9f9f6'; }
 
 openBtn.onclick = function() {
-    modal.style.display = 'block';
+    modal. style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
 
 closeBtn.onclick = function() {
-    modal.style.display = 'none';
+    modal. style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = 'none';
+        modal. style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 }
