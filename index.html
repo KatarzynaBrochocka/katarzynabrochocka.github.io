@@ -19,6 +19,62 @@
             box-sizing: border-box;
         }
         /* --- mechanizm zmiany języka --- */
+
+        <!-- Super-odporne przyciski językowe (PL/EN) -->
+<div class="lang-switch" style="position: relative; z-index: 999999 !important; text-align: center; margin: 15px 0;">
+    
+    <!-- PRZYCISK PL -->
+    <button id="pl-btn" style="
+        background: #0056b3; 
+        color: #fff; 
+        border: 1px solid #0056b3; 
+        padding: 8px 16px; 
+        font-weight: bold; 
+        cursor: pointer !important; 
+        pointer-events: auto !important; 
+        margin-right: 5px; 
+        border-radius: 4px;
+    " onclick="
+        var pl = document.getElementsByClassName('lang-pl');
+        var en = document.getElementsByClassName('lang-en');
+        for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important');
+        for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important');
+        
+        // Zmiana podświetlenia przycisków
+        document.getElementById('pl-btn').style.background = '#0056b3';
+        document.getElementById('pl-btn').style.color = '#fff';
+        document.getElementById('en-btn').style.background = 'transparent';
+        document.getElementById('en-btn').style.color = '#333';
+        document.getElementById('en-btn').style.borderColor = '#ccc';
+    ">PL</button>
+
+    <!-- PRZYCISK EN -->
+    <button id="en-btn" style="
+        background: transparent; 
+        color: #333; 
+        border: 1px solid #ccc; 
+        padding: 8px 16px; 
+        font-weight: bold; 
+        cursor: pointer !important; 
+        pointer-events: auto !important; 
+        border-radius: 4px;
+    " onclick="
+        var pl = document.getElementsByClassName('lang-pl');
+        var en = document.getElementsByClassName('lang-en');
+        for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important');
+        for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');
+        
+        // Zmiana podświetlenia przycisków
+        document.getElementById('en-btn').style.background = '#0056b3';
+        document.getElementById('en-btn').style.color = '#fff';
+        document.getElementById('en-btn').style.borderColor = '#0056b3';
+        document.getElementById('pl-btn').style.background = 'transparent';
+        document.getElementById('pl-btn').style.color = '#333';
+        document.getElementById('pl-btn').style.borderColor = '#ccc';
+    ">EN</button>
+    
+</div>
+        
         body[data-lang="en" .lang.pl {display: none !important; }
         body[data-lang="pl" .lang.en {display: none !important; }
 
