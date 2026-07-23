@@ -121,10 +121,24 @@
             text-transform: uppercase;
             cursor: pointer;
         }
+<!-- Przyciski z wbudowaną bezpośrednią logiką przełączania -->
+<button id="pl-btn" style="cursor:pointer; padding:5px 10px;" onclick="
+    var pl = document.getElementsByClassName('lang-pl');
+    var en = document.getElementsByClassName('lang-en');
+    for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important');
+    for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important');
+">PL</button>
 
-<button id="pl-btn" class="active" onclick="switchLanguage('pl')">PL</button>
-<button id="en-btn" onclick="switchLanguage('en')">EN</button>
-                 
+<button id="en-btn" style="cursor:pointer; padding:5px 10px;" onclick="
+    var pl = document.getElementsByClassName('lang-pl');
+    var en = document.getElementsByClassName('lang-en');
+    for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important');
+    for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');
+">EN</button>
+         /* Przełącznik języków 
+ <button id="pl-btn" class="active" onclick="switchLanguage('pl')">PL</button>
+<button id="en-btn" onclick="switchLanguage('en')">EN</button> */
+                  /* Przełącznik języków */
         .lang-btn {
             transition: color 0.3s;
             padding: 2px 5px;
