@@ -62,6 +62,26 @@
     
 </div>
     <style>
+
+        CSS
+/* Ukryj angielski, gdy włączony jest polski */
+body.lang-pl [lang="en"] {
+    display: none !important;
+}
+
+1./* Ukryj polski, gdy włączony jest angielski */
+body.lang-en [lang="pl"] {
+    display: none !important;
+}
+
+/* Opcjonalnie: styl aktywnego przycisku */
+.lang-btn {
+    cursor: pointer;
+}
+.lang-btn.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
         /* Reset & Podstawy -- główne style i kolory *//* {  box-sizing: border-box; margin: 0; padding: 0; }/* RWD dla urządzeń mobilnych */
         : root {
             --bg-color: #121212;
@@ -75,9 +95,50 @@
             padding ; 0;
             box-sizing: border-box;
         }
-        
+
+                /*/ Wklej ten skrypt JavaScript przed zamknięciem </body>
+Skrypt obsługuje przełączanie klas w <body> po kliknięciu w PL lub EN: */
+HTML
+script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btnPL = document.getElementById('btn-pl');
+    const btnEN = document.getElementById('btn-en');
+
+   /* // Ustawienie języka polskiego jako domyślnego/*/
+
+    document.body.classList.add('lang-pl');
+
+    // Przełączenie na język polski
+    btnPL.addEventListener('click', () => {
+        document.body.classList.remove('lang-en');
+        document.body.classList.add('lang-pl');
+       
+        btnPL.classList.add('active');
+        btnEN.classList.remove('active');
+    });
+
+    // Przełączenie na język angielski
+    btnEN.addEventListener('click', () => {
+        document.body.classList.remove('lang-pl');
+        document.body.classList.add('lang-en');
+       
+        btnEN.classList.add('active');
+        btnPL.classList.remove('active');
+    });
+});
+</script>
+/*@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 300px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
+*/
+    
         body[data-lang="en" .lang.pl {display: none !important; }
         body[data-lang="pl" .lang.en {display: none !important; }
+
+/* dopasuj upewnij się, że przyciski zmiany języka mają odpowiednie kwantyfikatory*/
+HTML
+<div class="lang-switcher">
+    <span id="btn-pl" class="lang-btn active">PL</span> |
+    <span id="btn-en" class="lang-btn">EN</span>
+</div>
 
         /*--- sekcja startowa (hero) --- */
 
@@ -124,15 +185,16 @@
     margin-bottom: 30px;
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
         }
-        
-/*@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 300px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
-*/
-        body {
+
+    /*  </body> */
+    
+    body {
             font-family: 'Georgia', serif;
             background-color: #f9f9f6;
             color: #1a1a1a;
             line-height: 1.6;
             padding: 40px 20px;
+            
         }
 
         .container {
