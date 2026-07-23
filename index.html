@@ -572,39 +572,41 @@ border-bottom: 1px
 </div>
 
 <!-- SKRYPTY LOGIKI -->
-<script>
-// Przełączanie języków
-function changeLang(lang) {
-    document.documentElement.lang = lang;
-    document.getElementById('btn-pl').classList.remove('active');
-    document.getElementById('btn-en').classList.remove('active');
-    document.getElementById('btn-' + lang).classList.add('active');
-}
-
-// Obsługa okna modalnego (Kontakt)
-const modal = document.getElementById('contactModal');
-const openBtn = document.getElementById('openContactBtn');
-const closeBtn = document.getElementById('closeContactBtn');
-
-openBtn.onmouseover = function() { this.style.background = '#f9f9f6'; this.style.color = '#1a1a1a'; }
-openBtn.onmouseout = function() { this.style.background = 'none'; this.style.color = '#f9f9f6'; }
-
-openBtn.onclick = function() {
-    modal. style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-closeBtn.onclick = function() {
-    modal. style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal. style.display = 'none';
-        document.body.style.overflow = 'auto';
+html<script>
+    // Logika przełączania zakładek (Biogram)
+    function openTab(tabName) {
+        var i, tabcontent, tabbtns;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        tabbtns = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tabbtns.length; i++) {
+            tabbtns[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
     }
-}
+
+    // Niezawodna logika przełączania języków przy pomocy klas CSS
+    function switchLanguage(lang) {
+        var plElements = document.getElementsByClassName("lang-pl");
+        var enElements = document.getElementsByClassName("lang-en");
+        
+        if (lang === 'pl') {
+            for (var i = 0; i < plElements.length; i++) plElements[i].style.setProperty('display', 'block', 'important');
+            for (var i = 0; i < enElements.length; i++) enElements[i].style.setProperty('display', 'none', 'important');
+            document.getElementById('pl-btn').classList.add('active');
+            document.getElementById('en-btn').classList.remove('active');
+        } else {
+            for (var i = 0; i < plElements.length; i++) plElements[i].style.setProperty('display', 'none', 'important');
+            for (var i = 0; i < enElements.length; i++) enElements[i].style.setProperty('display', 'block', 'important');
+            document.getElementById('en-btn').classList.add('active');
+            document.getElementById('pl-btn').classList.remove('active');
+        }
+    }
+    // Wymuszenie startu strony w języku polskim
+    switchLanguage('pl');
 </script>
 
 </body>
