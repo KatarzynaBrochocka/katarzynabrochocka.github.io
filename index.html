@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katarzyna Brochocka</title>
-    
-        /* --- mechanizm zmiany języka --- */
-
         <!-- Super-odporne przyciski językowe (PL/EN) -->
 <div class="lang-switch" style="position: relative; z-index: 999999 !important; text-align: center; margin: 15px 0;">
     
@@ -21,11 +18,12 @@
         pointer-events: auto !important; 
         margin-right: 5px; 
         border-radius: 4px;
-    " onclick="
+    "onclick="
         var pl = document.getElementsByClassName('lang-pl');
         var en = document.getElementsByClassName('lang-en');
         for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important');
         for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important');
+        
         
         // Zmiana podświetlenia przycisków
         document.getElementById('pl-btn').style.background = '#0056b3';
@@ -62,14 +60,13 @@
     
 </div>
     <style>
-
         CSS
 /* Ukryj angielski, gdy włączony jest polski */
 body.lang-pl [lang="en"] {
     display: none !important;
 }
 
-1./* Ukryj polski, gdy włączony jest angielski */
+/* 1. Ukryj polski, gdy włączony jest angielski */
 body.lang-en [lang="pl"] {
     display: none !important;
 }
@@ -82,46 +79,37 @@ body.lang-en [lang="pl"] {
     font-weight: bold;
     text-decoration: underline;
 }
-        /* Reset & Podstawy -- główne style i kolory *//* {  box-sizing: border-box; margin: 0; padding: 0; }/* RWD dla urządzeń mobilnych */
+    /* Reset & Podstawy -- główne style i kolory *//* {  box-sizing: border-box; margin: 0; padding: 0; }/* RWD dla urządzeń mobilnych */
         : root {
             --bg-color: #121212;
             --text-color: #f0f0f0;
             --accent-color: #d4af37;
             --font-headings: 'Georgia', sans-serif; text-transform: uppercase;
             --font-text: 'Georgia', serif; text-transform: normal;
-
             * {
                 margin; 0;
             padding ; 0;
             box-sizing: border-box;
         }
-
-                /*/ Wklej ten skrypt JavaScript przed zamknięciem </body>
-Skrypt obsługuje przełączanie klas w <body> po kliknięciu w PL lub EN: */
+/*/ Wklej ten skrypt JavaScript przed zamknięciem </body> Skrypt obsługuje przełączanie klas w <body> po kliknięciu w PL lub EN: */
 HTML
 script>
 document.addEventListener('DOMContentLoaded', () => {
     const btnPL = document.getElementById('btn-pl');
     const btnEN = document.getElementById('btn-en');
-
    /* // Ustawienie języka polskiego jako domyślnego/*/
-
     document.body.classList.add('lang-pl');
-
-    // Przełączenie na język polski
+    /*// Przełączenie na język polski */
     btnPL.addEventListener('click', () => {
         document.body.classList.remove('lang-en');
         document.body.classList.add('lang-pl');
-       
         btnPL.classList.add('active');
         btnEN.classList.remove('active');
     });
-
-    // Przełączenie na język angielski
+  /* // Przełączenie na język angielski (*/
     btnEN.addEventListener('click', () => {
         document.body.classList.remove('lang-pl');
         document.body.classList.add('lang-en');
-       
         btnEN.classList.add('active');
         btnPL.classList.remove('active');
     });
@@ -129,19 +117,15 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 /*@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 300px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
 */
-    
         body[data-lang="en" .lang.pl {display: none !important; }
         body[data-lang="pl" .lang.en {display: none !important; }
-
 /* dopasuj upewnij się, że przyciski zmiany języka mają odpowiednie kwantyfikatory*/
 HTML
 <div class="lang-switcher">
     <span id="btn-pl" class="lang-btn active">PL</span> |
     <span id="btn-en" class="lang-btn">EN</span>
 </div>
-
         /*--- sekcja startowa (hero) --- */
-
         .hero {
             height: 100vh;
             display: flex;
@@ -152,7 +136,6 @@ HTML
             position: relative;
             padding: 20px;
         }
-
         }.language-switcher {
             position: absolute;
             top: 30px;
@@ -179,26 +162,24 @@ HTML
 .profile-photo {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 30%;
     object-fit: cover;
     border: 2px solid var(--accent-color);
     margin-bottom: 30px;
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
         }
-
     /*  </body> */
     
     body {
-            font-family: 'Georgia', serif;
+            font-family: 'Georgia', serif; text-transform: uppercase;
             background-color: #f9f9f6;
             color: #1a1a1a;
             line-height: 1.6;
             padding: 40px 20px;
-            
         }
 
         .container {
-            max-width: 768px;  margin: 0 auto;
+            max-width: 400px;  margin: 0 auto;
         }
 
         .author {position: absolute; top:0; left: calc(100% + 2px); margin-left: 2px;
@@ -229,9 +210,7 @@ HTML
             text-transform: uppercase;
             margin-top: 5px;
         }
-
-            /*tu było zjęcie nr 1*/                         
-        /* Przełącznik języków */
+    /*tu było zjęcie nr 1*/  /* Przełącznik języków */
         .lang-switcher {
             font-family: sans-serif;
             font-size: 12px;
@@ -268,16 +247,11 @@ HTML
             color: #1a1a1a;
             border-bottom: 1px solid #1a1a1a;
         }
-
 /* Ukrywanie i wyświetlanie odpowiedniego języka tzn. ukrywanie nieaktywnego języka*/ /* Ukrywanie nieaktywnego języka */
          [lang="pl"], [lang="en"] { display: none; } 
-
         html[lang="pl"] [lang="pl"] {display: block;}
-
         html[lang="en"] [lang="en"] {display: block; }
-
         /* Dla elementów typu inline/inline-block, które mają język */
-
         html[lang="en"] span[lang="en"], 
         html[lang="en"] div.subtitle[lang="en"] {
             display: inline-block;
@@ -287,7 +261,6 @@ HTML
             display: inline-block;
         }
 
-     
         }
                   h1 {
             font-family: var(--font-headings);
@@ -306,7 +279,7 @@ HTML
 
         /* --- SEKCJE Z TREŚCIĄ --- */
         section {
-            max-width: 800px;
+            max-width: 400px;
             margin: 0 auto;
             padding: 80px 20px;
             border-bottom: 1px solid #333;
@@ -414,14 +387,12 @@ HTML
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-
         /* Biogram i sekcje */
         .biography {
             margin-bottom: 60px;
             font-size: 15px;
             text-align: justify;
         }
-
         .section-title {
             font-family: sans-serif;
             font-size: 14px;
@@ -465,8 +436,7 @@ border-bottom: 1px
       justify-content: center;
       margin: 2x 0;
     }
-}                                     
-                                     
+}                                                                
         .grid-blocks {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -489,7 +459,6 @@ border-bottom: 1px
             color: #444;
             margin-bottom: 15px;
         }
-
         /* Przyciski */
         .btn {
             display: inline-block;
@@ -508,7 +477,6 @@ border-bottom: 1px
             background-color: #1a1a1a;
             color: #f9f9f6;
         }
-
         /* Wideo / Audio */
         .media-container {
             background: #f0f0ec;
@@ -516,21 +484,18 @@ border-bottom: 1px
             border: 1px solid #e0e0dc;
             margin-bottom: 10px;
         }
-
         .media-container iframe {
             width: 100%;
             aspect-ratio: 16/9;
             border: none;
         }
-
-        /* Kontakt */
+    /* Kontakt */
         .contact-box {
             background-color: #1a1a1a;
             color: #f9f9f6;
             padding: 40px;
             margin-top: 60px;
         }
-
         .contact-box h2 {
             font-weight: normal;
             letter-spacing: 2px;
@@ -543,7 +508,6 @@ border-bottom: 1px
             color: #ccc;
             margin-bottom: 20px;
         }
-
         /* Responsywność */
         @media (max-width: 768px) {
             .grid-blocks { 
@@ -569,12 +533,10 @@ border-bottom: 1px
 <body>
 
 <div class="container">
-
     <!-- NAGŁÓWEK -->
     <header>
         <div>
             <h1>Katarzyna Brochocka</h1>
-            
         </div>
         <div class="lang-switcher">
             <span id="btn-pl" class="lang-btn active" onclick="changeLang('pl')">PL</span> | 
@@ -589,16 +551,15 @@ border-bottom: 1px
     <section class="photo-gallery">
         <div class="photo-wrapper">
             
-            <img src="foto1.jpg" size: 15%; alt="Katarzyna Brochocka">
+            <img src="foto1.jpg" size: 15%; max-width:400px; alt="Katarzyna Brochocka">
             <div lang="pl">
-            <div class="photo-credits"=>fot. Katarzyna Strzelecka</div>
+            <div class=".lang-title2"=>fot. Katarzyna Strzelecka</div>
                 </div>
             <div lang="en">
             <div class="photo-credits">pic. Katarzyna Strzelecka</div>
                 </div>
         </div>
     </section>
-
     <!-- BIOGRAM -->
     <section class="biography">
         <div lang="pl">
@@ -687,7 +648,6 @@ border-bottom: 1px
             </button>
         </div>
     </section>
-
 </div>
 
 <!-- FORMULARZ MODALNY (WYSKAKUJĄCY) -->
@@ -748,4 +708,4 @@ html<script>
 
 </body>
 </html>
- 
+  
