@@ -40,10 +40,10 @@ color: #666;
 text-transform: uppercase;
 margin-top: 50px;
 }
-/* Galeria 3 zdj=C4=99=C4=87 */
+/* Galeria 1 zdjęcie*/
 .photo-gallery {
 display: grid;
-grid-template-columns: 2fr 1fr 1fr;
+grid-template-columns: 1fr;
 gap: 15px;
 margin-bottom: 50px;
 }
@@ -68,7 +68,7 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 50px;
 margin-bottom: 60px;
-font-size: 15px;
+font-size: 12px;
 text-align: justify;
 }
 .lang-title {
@@ -84,7 +84,7 @@ padding-bottom: 15px;
 /* Sekcje merytoryczne */
 .section-title {
 font-family: sans-serif;
-font-size: 14px;
+font-size: 12px;
 letter-spacing: 3px;
 text-transform: uppercase;
 border-bottom: 1px solid #1a1a1a;
@@ -101,12 +101,12 @@ gap: 40px;
 margin-bottom: 40px;
 }
 .block h3 {
-font-size: 18px;
+font-size: 16px;
 font-weight: normal;
 margin-bottom: 20px;
 }
 .block p {
-font-size: 14px;
+font-size: 12px;
 color: #444;
 margin-bottom: 50px;
 }
@@ -156,7 +156,7 @@ font-size: 20px;
 .contact-box p {
 font-size: 14px;
 color: #ccc;
-max-width: 700px;
+max-width: 400px;
 margin-bottom: 20px;
 }
 .contact-email {
@@ -168,7 +168,7 @@ text-decoration: none;
 border-bottom: 1px solid #fff;
 }
 @media (max-width: 400px) {
-.biography, .grid-blocks, .photo-gallery { grid-template-columns: 1fr, 1fr; }
+.biography, .grid-blocks, .photo-gallery { grid-template-columns: 1fr; }
 .photo-gallery img { height: auto !important; }
 }
 </style>
@@ -276,7 +276,7 @@ btn" target=3D"_blank">Listen Worldwide</a>
 </div>
 </div>
 </div>
-     <div class="grid-blocks">
+   <!--  <div class="grid-blocks"> -->
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/chXyVZwfiIQ" title="Katarzyna Brochocka - Vocal Music"></iframe>
             <div class="subtitle" lang="pl" style="margin-top:3px;">Pieśń / Kiedy czas się kończy</div>
@@ -289,7 +289,7 @@ btn" target=3D"_blank">Listen Worldwide</a>
             <div class="subtitle" lang="en" style="margin-top:3px;">Piano solo / Rondo Perpetuo</div>
         </div>
 </div>
- <div class="grid-blocks">
+ <!--  <div class="grid-blocks"> -->
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/zikrURY9tFU" title="Katarzyna Brochocka - Prayer"></iframe>
             <div class="subtitle" lang="pl" style="margin-top:3px;">Kontrabas i fortepian / Prayer</div>
@@ -302,7 +302,7 @@ btn" target=3D"_blank">Listen Worldwide</a>
             <div class="subtitle" lang="en" style="margin-top:3px;">Opera / To Heaven</div>
         </div>
     </div>           
- <div class="grid-blocks">
+ <!--  <div class="grid-blocks"> -->
          <div class="media-container"> 
      <iframe src="https://www.youtube.com/embed/64QWKBO1HMw" title=Katarzyna Brochocka Work5"><iframe>
     <div class="subtitle": lang="pl" style="margin-top:3px;">Sonata fortepianowa nr 2, cz2, fortepian, Clemens Rave</div>
@@ -327,7 +327,7 @@ btn" target=3D"_blank">Listen Worldwide</a>
 instrumentacji prosimy kierować drogą mailową</p>
 <p style="margin-top: 30px;">
 <a href="mailto:k.brochocka@gmail.com" class="contact-email">
-katka.brochocka@gmail.com</a>
+ katka.brochocka@gmail.com</a>
 </p>
 </section>
 </div>
@@ -363,7 +363,6 @@ katka.brochocka@gmail.com</a>
             line-height: 1.6;
             padding: 40px 20px;
         }
-
         /* --- Panel przełączania języków -
         .language-switcher {
             position: absolute;
@@ -391,10 +390,10 @@ katka.brochocka@gmail.com</a>
         /* Gdy aktywny jest EN: ukryj elementy PL, p--
         body.lang-en .lang-pl { display: none !important; }
         body.lang-en .lang-en { display: block !important; }
-
+     
         /* --- Style sekcji i komponentów --- */
         .container {
-            max-width: 800px;
+            max-width: 400px;
             margin: 0 auto;
         }
 
@@ -415,7 +414,7 @@ katka.brochocka@gmail.com</a>
         }
 
         .profile-photo {
-            width: 250px;
+            width: 350px;
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
@@ -597,7 +596,7 @@ HTML
             color: var(--accent-color);
             font-weight: bold;
         }
-        querySelectorAll
+        query
 
 .profile-photo {
     width: 350px;
