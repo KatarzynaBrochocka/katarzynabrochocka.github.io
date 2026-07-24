@@ -6,11 +6,7 @@
     <title>Katarzyna Brochocka</title>
         <!-- Super-odporne przyciski językowe (PL/EN) -->
 <div class="lang-switch" style="position: relative; z-index: 999999 !important; text-align: center; margin: 15px 0;">
-   <!-- dla pewności,że Super-odporne przyciski mają przypisane identyfikatory klasy*/--->
-<div class="lang-switcher">
-    <span id="btn-pl" class="lang-btn active">PL</span> |
-    <span id="btn-en" class="lang-btn">EN</span>
-</div>
+ 
     <!-- PRZYCISK PL -->
     <button id="pl-btn" style="
         background: #0056b3; 
@@ -50,8 +46,8 @@
     " onclick="
         var pl = document.getElementsByClassName('lang-pl');
         var en = document.getElementsByClassName('lang-en');
-        for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important');
-        for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');
+        for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important'); querySelectorAll
+        for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important'); querySelectorAll
         
         // Zmiana podświetlenia przycisków
         document.getElementById('en-btn').style.background = '#0056b3';
@@ -61,6 +57,12 @@
         document.getElementById('pl-btn').style.color = '#333';
         document.getElementById('pl-btn').style.borderColor = '#ccc';
     ">EN</button>
+      <!-- dla pewności,że Super-odporne przyciski mają przypisane identyfikatory klasy*/--->
+<div class="lang-switcher">
+    <span id="btn-pl" class="lang-btn active">PL</span> |
+    <span id="btn-en" class="lang-btn">EN</span>
+</div>
+
     
 </div>
     <style>
