@@ -100,8 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-/*@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 300px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
-*/
+@media (max-width: 400px) { .grid-blocks { grid-template-columns: 1fr; gap: 20px; } .photo-gallery img { max-height: 300px; } .photo-wrapper { padding-right: 0; margin-bottom: 25px; } .photo-credits { position: relative; transform: none; right: auto; bottom: auto; text-align: right; display: block; margin-top: 5px; } }
         body[data-lang="en" .lang.pl {display: none !important; }
         body[data-lang="pl" .lang.en {display: none !important; }
 /* dopasuj upewnij się, że przyciski zmiany języka mają odpowiednie kwantyfikatory*/
@@ -128,17 +127,14 @@ HTML
             font-size: 1.1rem;
             letter-spacing: 2px;
         }
-
         .language-switcher span {
             cursor: pointer;
             color: #888;
             transition: color 0.3s ease;
         }
-
         .language-switcher span: hover {
             color: var(--text-color);
         }
-
         .language-switcher span.active {
             color: var(--accent-color);
             font-weight: bold;
@@ -146,7 +142,7 @@ HTML
         querySelectorAll
 
 .profile-photo {
-    width: 400px;
+    width: 350px;
     height: 250px;
     border-radius: 30%;
     object-fit: cover;
@@ -166,8 +162,8 @@ HTML
             --bg-color: #121212;
             --text-color: #f0f0f0;
             --accent-color: #d4af37;
-            --font-headings: 'Georgia', sans-serif; text-transform: uppercase;
-            --font-text: 'Georgia', serif; text-transform: normal;
+            --font-headings: 'Georgia', sans serif; text-transform: uppercase;
+            --font-text: 'Georgia', sans; text-transform: normal;
             --font-subtitles: 'Georgia', sans; text-transform: uppercase;
             * {
                 margin; 0;
@@ -344,7 +340,7 @@ HTML
         }
                  /* Galetria zdjęć */
                  .photo-gallery img { width: 100%;
-            max-height: 600px;
+            max-height: 678px;
             object-fit: cover;
             filter: grayscale(20%);
             border: 1px solid #ddd;                              
@@ -590,37 +586,40 @@ border-bottom: 1px
     <div class="grid-blocks">
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/chXyVZwfiIQ" title="Katarzyna Brochocka - Vocal Music"></iframe>
-            <div class="subtitle" lang="pl" style="margin-top:10px;">Pieśń / Kiedy czas się kończy</div>
-            <div class="subtitle" lang="en" style="margin-top:10px;">Art song / When Time Ends</div>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Pieśń / Kiedy czas się kończy</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Art song / When Time Ends</div>
         </div>
 
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/ysEpnttHBxE" title="Katarzyna Brochocka - Piano Solo"></iframe>
-            <div class="subtitle" lang="pl" style="margin-top:10px;">Fortepian solo / Rondo Perpetuo</div>
-            <div class="subtitle" lang="en" style="margin-top:10px;">Piano solo / Rondo Perpetuo</div>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Fortepian solo / Rondo Perpetuo</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Piano solo / Rondo Perpetuo</div>
         </div>
 
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/zikrURY9tFU" title="Katarzyna Brochocka - Prayer"></iframe>
-            <div class="subtitle" lang="pl" style="margin-top:10px;">Kontrabas i fortepian / Prayer</div>
-            <div class="subtitle" lang="en" style="margin-top:10px;">Double Bass & Piano / Prayer</div>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Kontrabas i fortepian / Prayer</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Double Bass & Piano / Prayer</div>
         </div>
 
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/0w_HHd544DU" title="Katarzyna Brochocka - Opera"></iframe>
-            <div class="subtitle" lang="pl" style="margin-top:10px;">Opera / Do nieba</div>
-            <div class="subtitle" lang="en" style="margin-top:10px;">Opera / To Heaven</div>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Opera / Do nieba</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Opera / To Heaven</div>
         </div>
-    </div>
-     <div class="media-container"> 
- <iframe src="https://www.youtube.com/embed/64QWKBO1HMw" title=Katarzyna Brochocka Work5"><iframe>
-<div class="subtitle": lang="pl" style="margin-top:10px;">Piano sonata nr 2, cz2, fortepian, Clemens Rave
-     <div class="subtitle": lang="en" style="margin-top:10px;">Piano sonata nr 2, mvt2, piano, Clemens Rave
+    </div>           
+         <div class="media-container"> 
+     <iframe src="https://www.youtube.com/embed/64QWKBO1HMw" title=Katarzyna Brochocka Work5"><iframe>
+    <div class="subtitle": lang="pl" style="margin-top:3px;">Sonata fortepianowa nr 2, cz2, fortepian, Clemens Rave
+    <div class="subtitle": lang="en" style="margin-top:3px;">Piano sonata nr 2, mvt2, piano, Clemens Rave
           </div>
+        </div>
   <div class="media-container"> 
      <iframe src="https://youtube.com/enbed/ABgLjUm48i4 title=Happy Garden of Life - opera-based story by Kurt Vonnegut"></iframe>
-   <div class="subtitle": lang="pl" style="margin-top:10px;">Opera / Happy Garden of Life</div>
-       </div>
+   <div class="subtitle": lang="pl" style="margin-top:3px;">Opera / Szczęśliwy ogród życia</div>
+     <div class="subtitle": lang="en" style="margin-top:3px;">Opera / Happy Garden of Life</div>
+       </div> 
+     <div
          <!-- SEKCJA KONTAKTOWA -->
     <section class="contact-box">
         <div lang="pl">
@@ -638,7 +637,7 @@ border-bottom: 1px
             </button>
         </div>
     </section>
-</div>
+</div
 <!-- FORMULARZ MODALNY (WYSKAKUJĄCY) -->
 <div id="contactModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(6px); overflow-y: auto;">
     <div style="background: #1a1a1a; margin: 8% auto; padding: 40px 30px; border: 1px solid #333; max-width: 550px; width: 90%; position: relative;">
