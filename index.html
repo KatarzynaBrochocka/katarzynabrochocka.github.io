@@ -20,7 +20,6 @@
     "onclick="
         var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
         var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
-        
         // Zmiana podświetlenia przycisków
         document.getElementById('pl-btn').style.background = '#0056b3';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
         document.getElementById('pl-btn').style.color = '#fff';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
@@ -28,7 +27,6 @@
         document.getElementById('en-btn').style.color = '#333'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
         document.getElementById('en-btn').style.borderColor = '#ccc'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
     ">PL</button>
-
     <!-- PRZYCISK EN -->
     <button id="en-btn" style="
         background: transparent; 
@@ -42,7 +40,6 @@
     " onclick="
         var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important'); querySelectorAll
         var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important'); querySelectorAll
-              
         // Zmiana podświetlenia przycisków
         document.getElementById('en-btn').style.background = '#0056b3';
         document.getElementById('en-btn').style.color = '#fff';
@@ -58,33 +55,27 @@
     <span id="btn-pl" class="lang-btn active">PL</span>  |   <span id="btn-en" class="lang-btn">EN</span>
 </div> 
   <!--*/--->
-    
 </div>
     <style>
         /* Styl surowego, presti=C5=BCowego archiwum */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-        
         CSS
-
         img {
             max-width: 100%;
             height: auto;
         }
-
         section img {
-            width: 400px;  
+            width: 768px;  
             border-radius: 12px;
         }
 /* Ukryj angielski, gdy włączony jest polski */
 body.lang-pl [lang="en"] {
     display: none !important;
 }
-
 /* 1. Ukryj polski, gdy włączony jest angielski */
 body.lang-en [lang="pl"] {
     display: none !important;
 }
-    
 /*/ Wklej ten skrypt JavaScript przed zamknięciem </body> Skrypt obsługuje przełączanie klas w <body> po kliknięciu w PL lub EN: */
 HTML
 script>
@@ -123,12 +114,12 @@ HTML
         .hero {
             height: 100vh;
             display: flex;
-            flex-direction: 2 column;
+            flex-direction: column;
             justify-content: center;
             align-items: left;
             text-align: center;
             position: relative;
-            padding: 20px;
+            padding: 6px;
         }
         }.language-switcher {
             position: absolute;
@@ -152,10 +143,10 @@ HTML
             color: var(--accent-color);
             font-weight: bold;
         }
-        query
+        querySelectorAll
 
 .profile-photo {
-    width: 350px;
+    width: 400px;
     height: 250px;
     border-radius: 30%;
     object-fit: cover;
@@ -163,7 +154,6 @@ HTML
     margin-bottom: 30px;
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
             }
-        
         /* Reset & Podstawy -- główne style i kolory *//* */
         {  box-sizing: border-box; margin: 0; padding: 0; }/* RWD dla urządzeń mobilnych */
         body {
@@ -270,7 +260,7 @@ HTML
         html[lang="pl"] div.subtitle[lang="pl"] {
             display: inline-block;
         }
-
+            
         }
                   h1 {
             font-family: var(--font-headings);
@@ -339,7 +329,6 @@ HTML
             background-color: var(--accent-color);
             color: var(--bg-color);
         }
-
         /* --- STOPKA --- */
         footer {
             text-align: center;
@@ -347,32 +336,28 @@ HTML
             color: #666;
             font-size: 0.9rem;
         }
-
         /* --- RESPONSYWNOŚĆ --- */
         @media (max-width: 400px) {
             h1 { font-size: 2.5rem; }
             .profile-photo { width: 180px; height: 180px; }
             .language-switcher { top: 20px; right: 20px; }
         }
-
                  /* Galetria zdjęć */
                  .photo-gallery img { width: 100%;
             max-height: 400px;
             object-fit: cover;
             filter: grayscale(20%);
-            border: 1px solid #ddd;
-                                     
+            border: 1px solid #ddd;                              
         /* Galeria zdjęć */
         .photo-gallery {
             margin-bottom: 50px;
             width: 100%;
         }
-
         .photo-wrapper {
             position: relative;
             display: block;
-            width: 50%;
-            padding-right: 30px; 
+            width: 60%;
+            padding-right: 20px; 
         }
 
         .photo-gallery img {
@@ -414,22 +399,22 @@ HTML
             margin-top: 50px;
         }
 .subtitle {
-    font-family: sans-serif;
-    font-size: 12px;
+    font-family: sans;
+    font-size: 10px;
     letter-spacing: 3px;
     color: #666;
     text-transform: uppercase;
-    margin-top: 5px;
+    margin-top: 1px;
 }
 .lang-title {
-    font-family: sans-serif;
-    font-size: 11px;
+    font-family: sans;
+    font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #888;
-    margin-bottom: 15px;
+    margin-bottom: 2px;
     border-bottom: 1px dashed #ccc;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 .lang-title2 { 
 transform: rotate(90deg); 
@@ -450,18 +435,18 @@ border-bottom: 1px
         .grid-blocks {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 6px;
         }
 
         .block {
-            margin-bottom: 20px;
+            margin-bottom: 6px;
         }
 
         .block h3 {
-            font-size: 18px;
+            font-size: 12px;
             font-weight: normal;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .block p {
@@ -512,7 +497,6 @@ border-bottom: 1px
             margin-bottom: 20px;
             font-size: 20px;
         }
-
         .contact-box p {
             font-size: 14px;
             color: #ccc;
@@ -559,12 +543,10 @@ border-bottom: 1px
                  for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');>
        <div class="subtitle" lang="en">Composer</div> 
     </header>
-
     <!-- ZDJĘCIE GŁÓWNE -->
     <section class="photo-gallery">
         <div class="photo-wrapper">
             <img src="foto1.jpg" size: 15%; max-width:400px; alt="Katarzyna Brochocka">
-            
             <div lang="pl">
             <div class="lang-title2"=>photo: Katarzyna Strzelecka</div>
                 </div>
