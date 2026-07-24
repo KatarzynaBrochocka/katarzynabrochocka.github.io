@@ -18,20 +18,18 @@
         margin-right: 5px; 
         border-radius: 4px;
     "onclick="
-        var pl = document.getElementsByClassName('lang-pl');
-        var en = document.getElementsByClassName('lang-en');
-        for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important');
-        for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important');
-                
+        var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
+        var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
+        
         // Zmiana podświetlenia przycisków
-        document.getElementById('pl-btn').style.background = '#0056b3';
-        document.getElementById('pl-btn').style.color = '#fff';
-        document.getElementById('en-btn').style.background = 'transparent';
-        document.getElementById('en-btn').style.color = '#333';
-        document.getElementById('en-btn').style.borderColor = '#ccc';
+        document.getElementById('pl-btn').style.background = '#0056b3';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
+        document.getElementById('pl-btn').style.color = '#fff';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
+        document.getElementById('en-btn').style.background = 'transparent'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
+        document.getElementById('en-btn').style.color = '#333'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
+        document.getElementById('en-btn').style.borderColor = '#ccc'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
     ">PL</button>
 
-    <!-- PRZYCISK EN -->
+    <!-- PRZYCISK EN 
     <button id="en-btn" style="
         background: transparent; 
         color: #333; 
@@ -55,10 +53,10 @@
         document.getElementById('pl-btn').style.borderColor = '#ccc';
         var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important'); querySelectorAll
     ">EN</button>
-      <!-- dla pewności,że Super-odporne przyciski mają przypisane identyfikatory klasy/*/*/--->
+      <!-- dla pewności,że Super-odporne przyciski mają przypisane identyfikatory klasy/*/
 <div class="lang-switcher">
     <span id="btn-pl" class="lang-btn active">PL</span>  |   <span id="btn-en" class="lang-btn">EN</span>
-</div>
+</div> 
   <!--*/--->
     
 </div>
@@ -74,7 +72,7 @@
         }
 
         section img {
-            width: 350px;  
+            width: 400px;  
             border-radius: 12px;
         }
 /* Ukryj angielski, gdy włączony jest polski */
@@ -180,6 +178,7 @@ HTML
             --accent-color: #d4af37;
             --font-headings: 'Georgia', sans-serif; text-transform: uppercase;
             --font-text: 'Georgia', serif; text-transform: normal;
+            --font-subtitles: 'Georgia', sans; text-transform: uppercase;
             * {
                 margin; 0;
             padding ; 0;
@@ -214,7 +213,7 @@ HTML
         }
 
         .subtitle {
-            font-family: sans-serif;
+            font-family: sans;
             font-size: 12px;
             letter-spacing: 3px;
             color: #666;
@@ -234,15 +233,15 @@ HTML
 <button id="pl-btn" style="cursor:pointer; padding:5px 10px;" onclick="
     var pl = document.getElementsByClassName('lang-pl');
     var en = document.getElementsByClassName('lang-en');
-    for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important');
-    for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important');
+    for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important');>
+    for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important');>
 ">PL</button>
 
 <button id="en-btn" style="cursor:pointer; padding:5px 10px;" onclick="
     var pl = document.getElementsByClassName('lang-pl');
     var en = document.getElementsByClassName('lang-en');
-    for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important');
-    for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');
+    for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important');>
+    for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');>
 ">EN</button>
          /* Przełącznik języków 
  <button id="pl-btn" class="active" onclick="switchLanguage('pl')">PL</button>
@@ -553,9 +552,11 @@ border-bottom: 1px
             <span id="btn-pl" class="lang-btn active" onclick="changeLang('pl')">PL</span> 
             <span id="btn-en" class="lang-btn" onclick="changeLang('en')">EN</span> --> 
         </div>
-         <div class="lang-switcher">
+         <div class="lang-switcher"; 
+             for(var i=0; i<pl.length; i++) pl[i].style.setProperty ('display', 'block', 'important');)>
         <div class="subtitle" lang="pl">Composer</div>
              <div class="lang-switcher">
+                 for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');>
        <div class="subtitle" lang="en">Composer</div> 
     </header>
 
