@@ -6,7 +6,7 @@
     <title>Katarzyna Brochocka</title>
     <style>
         /* --- Reset i zmienne globalne --- */
-        :root {
+        : root {
             --bg-color: #f9f9f6;
             --text-color: #1a1a1a;
             --accent-color: #0056b3;
@@ -119,15 +119,16 @@
         <header class="hero">
             <img src="https://placeholder.com" alt="Katarzyna Brochocka" class="profile-photo">
 
-   <!--  stary kod od tego miejsca: <!DOCTYPE html> 
+   <!--  stary kod od tego miejsca: -->
+            DOCTYPE html> 
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Katarzyna Brochocka</title>
-        <!-- Super-odporne przyciski językowe (PL/EN) 
+        <!-- Super-odporne przyciski językowe (PL/EN) -->
 <div class="lang-switch" style="position: relative; z-index: 999999 !important; text-align: center; margin: 15px 0;"> 
-    <!-- PRZYCISK PL 
+    <!-- PRZYCISK PL -->
     <button id="pl-btn" style="
         background: #0056b3; 
         color: #fff; 
@@ -140,17 +141,18 @@
         border-radius: 4px;
     "onclick="
         var pl = document.getElementsByClassName('lang-pl'); 
-        div for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
         var en = document.getElementsByClassName('lang-en'); 
-        div for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
+        
+        div for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); 
+        div for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); 
         // Zmiana podświetlenia przycisków
-        document.getElementById('pl-btn').style.background = '#0056b3';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
-        document.getElementById('pl-btn').style.color = '#fff';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); querySelectorAll
-        document.getElementById('en-btn').style.background = 'transparent'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
-        document.getElementById('en-btn').style.color = '#333'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
-        document.getElementById('en-btn').style.borderColor = '#ccc'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); querySelectorAll
+        document.getElementById('pl-btn').style.background = '#0056b3';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); 
+        document.getElementById('pl-btn').style.color = '#fff';   var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'block', 'important'); 
+        document.getElementById('en-btn').style.background = 'transparent'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); 
+        document.getElementById('en-btn').style.color = '#333'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); 
+        document.getElementById('en-btn').style.borderColor = '#ccc'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); 
     ">PL</button>
-    <!-- PRZYCISK EN
+    <!-- PRZYCISK EN -->
     <button id="en-btn" style="
         background: transparent; 
         color: #333; 
@@ -161,17 +163,17 @@
         pointer-events: auto !important; 
         border-radius: 4px;
     " onclick="
-        var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important'); querySelectorAll
-        var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important'); querySelectorAll
+        var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important'); 
+        var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important'); 
         // Zmiana podświetlenia przycisków
         document.getElementById('en-btn').style.background = '#0056b3';
         document.getElementById('en-btn').style.color = '#fff';
         document.getElementById('en-btn').style.borderColor = '#0056b3';
-          var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important'); querySelectorAll
+          var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important'); 
         document.getElementById('pl-btn').style.background = 'transparent';
         document.getElementById('pl-btn').style.color = '#333';
         document.getElementById('pl-btn').style.borderColor = '#ccc';
-        var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important'); querySelectorAll
+        var pl = document.getElementsByClassName('lang-pl'); for(var i=0; i<pl.length; i++) pl[i].style.setProperty('display', 'none', 'important');
     ">EN</button>
       <!-- dla pewności,że Super-odporne przyciski mają przypisane identyfikatory klasy/*/
 <div class="lang-switcher">
