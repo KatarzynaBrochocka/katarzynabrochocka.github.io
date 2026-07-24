@@ -64,6 +64,9 @@
     
 </div>
     <style>
+        /* Styl surowego, presti=C5=BCowego archiwum */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+        
         CSS
 
         img {
@@ -84,7 +87,6 @@ body.lang-pl [lang="en"] {
 body.lang-en [lang="pl"] {
     display: none !important;
 }
-
     
 /*/ Wklej ten skrypt JavaScript przed zamknięciem </body> Skrypt obsługuje przełączanie klas w <body> po kliknięciu w PL lub EN: */
 HTML
@@ -165,7 +167,14 @@ HTML
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
             }
         
-        /* Reset & Podstawy -- główne style i kolory *//* {  box-sizing: border-box; margin: 0; padding: 0; }/* RWD dla urządzeń mobilnych */
+        /* Reset & Podstawy -- główne style i kolory *//* */
+        {  box-sizing: border-box; margin: 0; padding: 0; }/* RWD dla urządzeń mobilnych */
+        body {
+            font-family: 'Georgia', serif; text-transform: uppercase;
+            background-color: #f9f9f6;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 40px 20px;
         : root {
             --bg-color: #121212;
             --text-color: #f0f0f0;
@@ -179,12 +188,6 @@ HTML
         }
     </body> 
     
-    body {
-            font-family: 'Georgia', serif; text-transform: uppercase;
-            background-color: #f9f9f6;
-            color: #1a1a1a;
-            line-height: 1.6;
-            padding: 40px 20px;
         }
 
         .container {
