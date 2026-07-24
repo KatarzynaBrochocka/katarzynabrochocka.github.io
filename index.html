@@ -1,4 +1,343 @@
 <!DOCTYPE html>
+<html lang=3D"pl">
+<head>
+<meta charset=3D"UTF-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+<title>Katarzyna Brochocka | Composer & Pianist</title>
+<style>
+/* Styl surowego, presti=C5=BCowego archiwum */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+font-family: 'Georgia', serif;
+background-color: #f9f9f6;
+color: #1a1a1a;
+line-height: 1.6;
+padding: 40px 20px;
+}
+.container {
+max-width: 1000px;
+margin: 0 auto;
+}
+header {
+border-bottom: 1px solid #1a1a1a;
+padding-bottom: 20px;
+margin-bottom: 40px;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+h1 {
+font-size: 28px;
+font-weight: normal;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.subtitle {
+font-family: sans-serif;
+font-size: 12px;
+letter-spacing: 3px;
+color: #666;
+text-transform: uppercase;
+margin-top: 5px;
+}
+/* Galeria 3 zdj=C4=99=C4=87 */
+.photo-gallery {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+gap: 15px;
+margin-bottom: 50px;
+}
+.photo-gallery img {
+width: 100%;
+height: 400px;
+object-fit: cover;
+filter: grayscale(30%);
+border: 1px solid #ddd;
+}
+.photo-gallery img:not(:first-child) {
+height: 192px;
+}
+.gallery-stack {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+/* Dwukolumnowy biogram */
+.biography {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+margin-bottom: 60px;
+font-size: 15px;
+text-align: justify;
+}
+.lang-title {
+font-family: sans-serif;
+font-size: 11px;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #888;
+margin-bottom: 15px;
+border-bottom: 1px dashed #ccc;
+padding-bottom: 5px;
+}
+/* Sekcje merytoryczne */
+.section-title {
+font-family: sans-serif;
+font-size: 14px;
+letter-spacing: 3px;
+text-transform: uppercase;
+border-bottom: 1px solid #1a1a1a;
+padding-bottom: 5px;
+margin-bottom: 25px;
+margin-top: 50px;
+}
+.grid-blocks {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+.block {
+margin-bottom: 20px;
+}
+.block h3 {
+font-size: 18px;
+font-weight: normal;
+margin-bottom: 10px;
+}
+.block p {
+font-size: 14px;
+color: #444;
+margin-bottom: 15px;
+}
+/* Przyciski i linki */
+.btn {
+display: inline-block;
+font-family: sans-serif;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+text-decoration: none;
+color: #1a1a1a;
+border: 1px solid #1a1a1a;
+padding: 8px 15px;
+transition: all 0.3s;
+}
+.btn:hover {
+background-color: #1a1a1a;
+color: #f9f9f6;
+}
+/* Wideo i Audio */
+.media-container {
+margin-bottom: 20px;
+background: #f0f0ec;
+padding: 15px;
+border: 1px solid #e0e0dc;
+}
+iframe, video {
+width: 100%;
+aspect-ratio: 16/9;
+border: none;
+}
+/* Filtr kontaktowy */
+.contact-box {
+background-color: #1a1a1a;
+color: #f9f9f6;
+padding: 40px;
+margin-top: 60px;
+}
+.contact-box h2 {
+font-weight: normal;
+letter-spacing: 2px;
+margin-bottom: 20px;
+font-size: 20px;
+}
+.contact-box p {
+font-size: 14px;
+color: #ccc;
+max-width: 700px;
+margin-bottom: 20px;
+}
+.contact-email {
+font-family: sans-serif;
+font-size: 18px;
+letter-spacing: 1px;
+color: #fff;
+text-decoration: none;
+border-bottom: 1px solid #fff;
+}
+@media (max-width: 768px) {
+.biography, .grid-blocks, .photo-gallery { grid-template-columns: 1fr; }
+.photo-gallery img { height: auto !important; }
+}
+</style>
+</head>
+<body>
+
+<div class=3D"container">
+
+<header>
+<div>
+<h1>Katarzyna Brochocka</h1>
+<div class=3D"subtitle">Composer & Pianist</div>
+</div>
+<div class=3D"subtitle">PL | EN</div>
+</header>
+
+<!-- GALERIA TRZECH ZDJ=C4=98=C4=86 -->
+<section class=3D"photo-gallery">
+<img src=3D"foto1.jpg" alt=3D"Katarzyna Brochocka - fot. 1">
+<div class=3D"gallery-stack">
+<img src=3D"foto2.jpg" alt=3D"Katarzyna Brochocka - fot. 2">
+<img src=3D"foto3.jpg" alt=3D"Katarzyna Brochocka - fot. 3">
+</div>
+</section>
+
+<!-- BIOGRAM DWUJ=C4=98ZYCZNY -->
+<section class=3D"biography">
+<div>
+<div class=3D"lang-title">Polski</div>
+<p><strong>Katarzyna Brochocka</strong> =E2=80=93 kompozytorka, librecistka=
+ i
+pianistka. Autorka oper, pie=C5=9Bni, utwor=C3=B3w orkiestrowych, kameralny=
+ch oraz
+muzyki teatralnej. Jej dzie=C5=82a, wydawane od 2022 roku przez Universal
+Edition, s=C4=85 regularnie prezentowane w kraju i za granic=C4=85. Realizo=
+wa=C5=82a
+zam=C3=B3wienia m.in. Narodowego Forum Muzyki we Wroc=C5=82awiu oraz Filhar=
+monii
+Warmi=C5=84sko-Mazurskiej w Olsztynie. Jest laureatk=C4=85 licznych mi=C4=
+=99dzynarodowych
+Konkursów w Polsce, USA, Austrii, Włoszech i Anglii. W 2021 roku =
+uzyskała stopień doktora sztuk muzycznych na Wydziale Kompozycji i Teorii Muzyki
+Uniwersytetu Muzycznego Fryderyka Chopina w Warszawie. Dyskografia artystki
+obejmuje trzy albumy wydane nak=C5=82adem wytw=C3=B3rni CD Accord: Brochocka,
+Weinberg: Double Bass Works (2015), M=C5=82oda m=C4=99=C5=BCatka / The Young 
+Wife (2020) oraz Brochocka: Unquiet Heart (2025).</p>
+</div>
+<div>
+<div class=3D"lang-title">English</div>
+<p><strong>Katarzyna Brochocka</strong> -- Polish composer, the author of
+symphonic, chamber, and solo works. She specializes in vocal, operatic, and
+theater music. The winner of numerous international awards, including the
+Capital Fringe Festival Audience Award for the Best Musical Theatre & Opera
+(Washington, 2013), Opera Vista Artistic Director=E2=80=99s Prize (Houston,=
+ 2010),
+Grand Prize in the chamber division of 2008 David Walter/ISB International
+Composition Competition; Special Commendation at the 2008 Nancy Van de Vate
+International Composition Prize for Opera, Vienna. Brochocka received a
+Certificate of merit and a Special Mention at the Italian Femfestival Women
+Composers Competition (Siena, 2022). Katarzyna Brochocka was also the
+finalist of the Douglas Moore Fund for American Opera Competition (New
+York, 2010) and a runner-up in the Flourish Opera Competition (London,
+2012) and the 2010 I.C.A. Composition Competition. She was a grant holder
+of the Polish Ministry of Culture and National Heritage Creativity
+Promotion Fund (2010).</p>
+</div>
+</section>
+
+<!-- FILARY PUBLIKACYJNE -->
+<div class=3D"grid-blocks">
+<div>
+<div class=3D"section-title">Scores & Rentals</div>
+<div class=3D"block">
+<h3>Universal Edition (Wiede=C5=84)</h3>
+<p>Oficjalny katalog dzie=C5=82 =E2=80=93 w tym utwory wielkoorkiestrowe, operowe oraz
+    kameralne jest wydawane przez Universal Edition. Zakup partytur
+PDF/Print oraz wypo=C5=BCyczenia materia=C5=82=C3=B3w koncertowych dla filharmonii i
+teatru realizowane są bezpośrednio przez platformę wydawcy.</p>
+<a href=3D"https://www.universaledition.com/en/Contacts/Katarzyna-Brochocka=
+/"
+class=3D"btn" target=3D"_blank">Browse Catalogue</a>
+</div>
+</div>
+<div>
+<div class=3D"section-title">Discography & Distribution</div>
+<div class=3D"block">
+<h3>NAXOS & Universal Music</h3>
+<p>Autorskie nagrania kompozytorki podlegają oficjalnej dystrybucji
+globalnej (NAXOS) oraz krajowej (Universal Music Poland). Dostępne w
+sprzedaży fizycznej oraz w międzynarodowych bazach streamingowych.</p>
+<a href=3D"https://open.spotify.com/album/6xtc12Tnviob7C8zYVUBPJ" class=3D"=
+btn" target=3D"_blank">Listen Worldwide</a>
+</div>
+</div>
+</div>
+
+<!-- SEKCJA VIDEO / AUDIO -->
+<div class=3D"section-title">Selected Works / Media</div>
+<div class=3D"grid-blocks">
+<div class=3D"media-container">
+<iframe src=3D"https://www.youtube.com/embed/9P9j9hSsw30" title=3D"Katarzyn=
+a
+Brochocka Work"></iframe>
+<div class=3D"subtitle" style=3D"margin-top:10px;">Pieśń/ Kiedy czas się kończy</div>
+</div>
+<div class=3D"media-container">
+<iframe src=3D"https://www.youtube.com/embed/chXyVZwfiIQ" title=3D"Katarzyna Brochocka Work 2"></iframe>
+<div class=3D"subtitle" style=3D"margin-top:10px;">Pie=C5=9B=C5=84 na g=C5=
+=82os i kontrabas
+(Nagranie koncertowe)</div>
+</div>
+</div>
+     <div class="grid-blocks">
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/chXyVZwfiIQ" title="Katarzyna Brochocka - Vocal Music"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Pieśń / Kiedy czas się kończy</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Art song / When Time Ends</div>
+        </div>
+
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/ysEpnttHBxE" title="Katarzyna Brochocka - Piano Solo"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Fortepian solo / Rondo Perpetuo</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Piano solo / Rondo Perpetuo</div>
+        </div>
+
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/zikrURY9tFU" title="Katarzyna Brochocka - Prayer"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Kontrabas i fortepian / Prayer</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Double Bass & Piano / Prayer</div>
+        </div>
+
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/0w_HHd544DU" title="Katarzyna Brochocka - Opera"></iframe>
+            <div class="subtitle" lang="pl" style="margin-top:3px;">Opera / Do nieba</div>
+            <div class="subtitle" lang="en" style="margin-top:3px;">Opera / To Heaven</div>
+        </div>
+    </div>           
+         <div class="media-container"> 
+     <iframe src="https://www.youtube.com/embed/64QWKBO1HMw" title=Katarzyna Brochocka Work5"><iframe>
+    <div class="subtitle": lang="pl" style="margin-top:3px;">Sonata fortepianowa nr 2, cz2, fortepian, Clemens Rave
+    <div class="subtitle": lang="en" style="margin-top:3px;">Piano sonata nr 2, mvt2, piano, Clemens Rave
+          </div>
+        </div>
+  <div class="media-container"> 
+     <iframe src="https://youtube.com/enbed/ABgLjUm48i4 title=Happy Garden of Life - opera-based story by Kurt Vonnegut"></iframe>
+   <div class="subtitle": lang="pl" style="margin-top:3px;">Opera / Szczęśliwy ogród życia</div>
+     <div class="subtitle": lang="en" style="margin-top:3px;">Opera / Happy Garden of Life</div>
+       </div> 
+     <div
+
+<!-- FILTR ANTY-JANUSZOWY (Kontakt) -->
+<section class=3D"contact-box">
+<h2>Professional Inquiries & Commissions</h2>
+<p>Wszystkie zlecenia kompozytorskie kontakt przez formularz
+(non-profit/pro bono) nie s=C4=85 rozpatrywane.</p>
+<p>Zapytania dotycz=C4=85ce nowych utwor=C3=B3w, termin=C3=B3w prapremier oraz
+instrumentacji prosimy kierowa=C4=87 drog=C4=85 mailow=C4=85:</p>
+<p style=3D"margin-top: 30px;">
+<a href=3D"mailto:k.brochocka@gmail.com" class=3D"contact-email">
+katka.brochocka@gmail.com</a>
+</p>
+</section>
+
+</div>
+
+</body>
+</html>
+ <!-- stary kod html na dwie kolumny PL EN 0-->
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
