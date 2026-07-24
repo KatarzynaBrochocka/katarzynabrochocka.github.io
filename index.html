@@ -391,7 +391,7 @@ HTML
             transform: rotate(-90deg);
             transform-origin: right bottom;
             white-space: nowrap;
-            font-family: sans-serif;
+            font-family: sans;
             font-size: 6px;
             color: #8B3A00;
             letter-spacing: 1px;
@@ -548,9 +548,9 @@ border-bottom: 1px
         <div>
             <h1>Katarzyna Brochocka</h1>
         </div>
-        <!-- ukrywanie nieaktywnych napisów: <div class="lang-switcher">
+        <!-- ukrywanie nieaktywnych napisów: <div class="lang-switcher"> --> 
             <span id="btn-pl" class="lang-btn active" onclick="changeLang('pl')">PL</span> 
-            <span id="btn-en" class="lang-btn" onclick="changeLang('en')">EN</span> --> 
+            <span id="btn-en" class="lang-btn" onclick="changeLang('en')">EN</span> 
         </div>
          <div class="lang-switcher"; 
              for(var i=0; i<pl.length; i++) pl[i].style.setProperty ('display', 'block', 'important');)>
@@ -566,10 +566,10 @@ border-bottom: 1px
             <img src="foto1.jpg" size: 15%; max-width:400px; alt="Katarzyna Brochocka">
             
             <div lang="pl">
-            <div class="photo-credits"=>photo: Katarzyna Strzelecka</div>
+            <div class="lang-title2"=>photo: Katarzyna Strzelecka</div>
                 </div>
             <div lang="en">
-            <div class="photo-credits">photo: Katarzyna Strzelecka</div>
+            <div class="lang-title2">photo: Katarzyna Strzelecka</div>
                 </div>
         </div>
     </section>
@@ -611,8 +611,8 @@ border-bottom: 1px
     <div class="grid-blocks">
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/chXyVZwfiIQ" title="Katarzyna Brochocka - Vocal Music"></iframe>
-            <div class="subtitle" lang="pl" style="margin-top:10px;">Muzyka wokalna / Kiedy czas się kończy (Fragment)</div>
-            <div class="subtitle" lang="en" style="margin-top:10px;">Vocal music / When Time Ends (Excerpt)</div>
+            <div class="subtitle" lang="pl" style="margin-top:10px;">Pieśń / Kiedy czas się kończy</div>
+            <div class="subtitle" lang="en" style="margin-top:10px;">Art song / When Time Ends</div>
         </div>
 
         <div class="media-container">
@@ -623,8 +623,8 @@ border-bottom: 1px
 
         <div class="media-container">
             <iframe src="https://www.youtube.com/embed/zikrURY9tFU" title="Katarzyna Brochocka - Prayer"></iframe>
-            <div class="subtitle" lang="pl" style="margin-top:10px;">Fortepian i kontrabas / Prayer</div>
-            <div class="subtitle" lang="en" style="margin-top:10px;">Piano & Double Bass / Prayer</div>
+            <div class="subtitle" lang="pl" style="margin-top:10px;">Kontrabas i fortepian / Prayer</div>
+            <div class="subtitle" lang="en" style="margin-top:10px;">Double Bass & Piano / Prayer</div>
         </div>
 
         <div class="media-container">
@@ -639,8 +639,9 @@ border-bottom: 1px
      <div class="subtitle": lang="en" style="margin-top:10px;">Piano sonata nr 2, mvt2, piano, Clemens Rave
           </div>
   <div class="media-container"> 
-     <iframe src="https://youtube.com/enbed/ABgLjUm48i4 title=Happy Garden of Life - opera-based story by Kurt Vonnegut"><iframe>
-    
+     <iframe src="https://youtube.com/enbed/ABgLjUm48i4 title=Happy Garden of Life - opera-based story by Kurt Vonnegut"></iframe>
+   <div class="subtitle": lang="pl" style="margin-top:10px;">Opera / Happy Garden of Life</div>
+       </div>
          <!-- SEKCJA KONTAKTOWA -->
     <section class="contact-box">
         <div lang="pl">
@@ -651,7 +652,6 @@ border-bottom: 1px
             <h2>Professional Inquiries & Commissions</h2>
             <p>Feel free to contact me regarding commissions and performances of my music. All composition commissions are carried out under official contracts. Non-profit requests are not considered.</p>
         </div>
-
         <!-- Przycisk Koperty -->
         <div style="text-align: center; margin-top: 30px;">
             <button id="openContactBtn" title="Kontakt" style="background: none; border: 1px solid #f9f9f6; color: #f9f9f6; font-size: 32px; width: 70px; height: 70px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
@@ -660,7 +660,6 @@ border-bottom: 1px
         </div>
     </section>
 </div>
-
 <!-- FORMULARZ MODALNY (WYSKAKUJĄCY) -->
 <div id="contactModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(6px); overflow-y: auto;">
     <div style="background: #1a1a1a; margin: 8% auto; padding: 40px 30px; border: 1px solid #333; max-width: 550px; width: 90%; position: relative;">
@@ -678,7 +677,6 @@ border-bottom: 1px
         </form>
     </div>
 </div>
-
 <!-- SKRYPTY LOGIKI -->
 html<script>
     // Logika przełączania zakładek (Biogram)
@@ -695,8 +693,7 @@ html<script>
         document.getElementById(tabName).classList.add("active");
         event.currentTarget.classList.add("active");
     }
-
-    // Niezawodna logika przełączania języków przy pomocy klas CSS
+// Niezawodna logika przełączania języków przy pomocy klas CSS
     function switchLanguage(lang) {
         var plElements = document.getElementsByClassName("lang-pl");
         var enElements = document.getElementsByClassName("lang-en");
