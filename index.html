@@ -110,7 +110,7 @@ font-size: 14px;
 color: #444;
 margin-bottom: 50px;
 }
-/* Przyciski i linki */
+/* Przyciski i linki 
 .btn {
 display: inline-block;
 font-family: sans-serif;
@@ -126,7 +126,7 @@ transition: all 0.3s;
 .btn: hover {
 background-color: #1a1a1a;
 color: #f9f9f6;
-}
+} */
 /* Wideo i Audio */
 .media-container {
 margin-bottom: 20px;
@@ -166,8 +166,8 @@ color: #fff;
 text-decoration: none;
 border-bottom: 1px solid #fff;
 }
-@media (max-width: 768px) {
-.biography, .grid-blocks, .photo-gallery { grid-template-columns: 1fr; }
+@media (max-width: 400px) {
+.biography, .grid-blocks, .photo-gallery { grid-template-columns: 1fr, 1fr; }
 .photo-gallery img { height: auto !important; }
 }
 </style>
@@ -181,7 +181,7 @@ border-bottom: 1px solid #fff;
 <h1>Katarzyna Brochocka</h1>
 <div class=3D"subtitle">Composer</div>
 </div>
-<div class=3D"subtitle">PL | EN</div>
+<!-- <div class=3D"subtitle">PL | EN</div>
 </header>
 
 <!-- GALERIA TRZECH ZDJ=C4=98=C4=86 -->
@@ -192,7 +192,7 @@ border-bottom: 1px solid #fff;
 </section>
 
 <!-- BIOGRAM DWUJĘZYCZNY -->
-<section class=3D"biography">
+<section class="biography">
 <div>
 <div class="lang-title">Polski</div>
 <p><strong>Katarzyna Brochocka</strong> - kompozytorka, librecistka i pianistka. 
@@ -230,7 +230,9 @@ Promotion Fund (2010). Her discography includes three CDs released by CD Accord:
 </div>
  </div>
 <div>
- 
+ <div>
+  </div>
+   
 </section>
 <!-- FILARY PUBLIKACYJNE -->
 <div class="grid-blocks">
@@ -252,7 +254,7 @@ class=3D"btn" target=3D"_blank">Browse Catalogue</a>
 <p>Autorskie nagrania kompozytorki podlegają 
  oficjalnej dystrybucji globalnej (NAXOS) oraz krajowej (Universal Music Poland). Dostępne 
  w sprzedaży fizycznej oraz w międzynarodowych bazach streamingowych.</p>
-<a href=3D"https://open.spotify.com/album/6xtc12Tnviob7C8zYVUBPJ" class=3D"=
+<a href="https://open.spotify.com/album/6xtc12Tnviob7C8zYVUBPJ" class=
 btn" target=3D"_blank">Listen Worldwide</a>
 </div>
 </div>
@@ -299,22 +301,23 @@ btn" target=3D"_blank">Listen Worldwide</a>
     </div>           
          <div class="media-container"> 
      <iframe src="https://www.youtube.com/embed/64QWKBO1HMw" title=Katarzyna Brochocka Work5"><iframe>
-    <div class="subtitle": lang="pl" style="margin-top:3px;">Sonata fortepianowa nr 2, cz2, fortepian, Clemens Rave
-    <div class="subtitle": lang="en" style="margin-top:3px;">Piano sonata nr 2, mvt2, piano, Clemens Rave
-          </div>
-        </div>
+    <div class="subtitle": lang="pl" style="margin-top:3px;">Sonata fortepianowa nr 2, cz2, fortepian, Clemens Rave</div>
+    <div class="subtitle": lang="en" style="margin-top:3px;">Piano sonata nr 2, mvt2, piano, Clemens Rave</div>
+    <div>
+    
   <div class="media-container"> 
-     <iframe src="https://youtube.com/embed/ABgLjUm48i4 title=Happy Garden of Life - opera-based story by Kurt Vonnegut"></iframe>
+     <iframe src="https://youtube.com/embed/ABgLjUm48i4 titleKatarzyna Brochocka Work6"></iframe>
    <div class="subtitle": lang="pl" style="margin-top:3px;">Opera / Szczęśliwy ogród życia</div>
      <div class="subtitle": lang="en" style="margin-top:3px;">Opera / Happy Garden of Life</div> 
        </div> 
-     <div
+     </div>
+     <div>
 
 <!-- FILTR ANTY-JANUSZOWY (Kontakt) -->
 <section class="contact-box">
 <h2>Professional Inquiries & Commissions</h2>
 <p>Wszystkie zlecenia kompozytorskie kontakt przez formularz
-(non-profit/pro bono) nie s=C4=85 rozpatrywane.</p>
+(non-profit/pro bono) nie są rozpatrywane.</p>
 <p>Zapytania dotyczące nowych utworów, terminów, prapremier oraz
 instrumentacji prosimy kierować drogą mailową</p>
 <p style="margin-top: 30px;">
@@ -365,7 +368,6 @@ katka.brochocka@gmail.com</a>
             letter-spacing: 2px;
             z-index: 9999;
         }
-
         .lang-btn {
             cursor: pointer;
             color: #888;
@@ -373,7 +375,6 @@ katka.brochocka@gmail.com</a>
             font-weight: normal;
             padding: 5px 10px;
         }
-
         .lang-btn.active {
             color: var(--accent-color);
             font-weight: bold;
@@ -435,7 +436,7 @@ katka.brochocka@gmail.com</a>
 </head>
 <body class="lang-pl">
 
-    <!-- Przełącznik języków widoczny na stronie -->
+    <!-- Przełącznik języków widoczny na stronie 
     <div class="language-switcher">
         <span id="btn-pl" class="lang-btn active">PL</span> | 
         <span id="btn-en" class="lang-btn">EN</span>
@@ -446,14 +447,14 @@ katka.brochocka@gmail.com</a>
         <header class="hero">
             <img src="https://placeholder.com" alt="Katarzyna Brochocka" class="profile-photo">
 
-   <!--  stary kod od tego miejsca: -->
+   <!--  stary kod od tego miejsca:
             DOCTYPE html> 
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Katarzyna Brochocka</title>
-        <!-- Super-odporne przyciski językowe (PL/EN) -->
+        <!-- Super-odporne przyciski językowe (PL/EN) 
 <div class="lang-switch" style="position: relative; z-index: 999999 !important; text-align: center; margin: 15px 0;"> 
     <!-- PRZYCISK PL -->
     <button id="pl-btn" style="
@@ -479,7 +480,7 @@ katka.brochocka@gmail.com</a>
         document.getElementById('en-btn').style.color = '#333'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); 
         document.getElementById('en-btn').style.borderColor = '#ccc'; var en = document.getElementsByClassName('lang-en'); for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'none', 'important'); 
     ">PL</button>
-    <!-- PRZYCISK EN -->
+    <!-- PRZYCISK EN 
     <button id="en-btn" style="
         background: transparent; 
         color: #333; 
@@ -827,7 +828,7 @@ HTML
         }
         /* Biogram i sekcje */
         .biography {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-size: 15px;
             text-align: justify;
         }
@@ -1069,8 +1070,8 @@ border-bottom: 1px
      <iframe src="https://youtube.com/enbed/ABgLjUm48i4 title=Happy Garden of Life - opera-based story by Kurt Vonnegut"></iframe>
    <div class="subtitle": lang="pl" style="margin-top:3px;">Opera / Szczęśliwy ogród życia</div>
      <div class="subtitle": lang="en" style="margin-top:3px;">Opera / Happy Garden of Life</div>
-       </div> 
-     <div
+       </div>  
+     <div/
          <!-- SEKCJA KONTAKTOWA -->
     <section class="contact-box">
         <div lang="pl">
