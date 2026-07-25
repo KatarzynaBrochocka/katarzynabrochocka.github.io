@@ -1,5 +1,15 @@
 <!DOCTYPE html>
+<CSS 
+/* Domyślnie ukrywamy angielski, gdy aktywny jest polski */
+body.lang-pl .lang-en { display: none !important; }
+
+/* Ukrywamy polski, gdy aktywny jest angielski */
+body.lang-en .lang-pl { display: none !important; }
+W pliku HTML oznacz elementy odpowiednimi klasami:
+
 <html lang="pl">
+            <p class="lang-pl">Witam!</p>
+            <p class="lang-en">Welcome</p>
 <head>
 <meta charset="UTF-8">
             <meta name="viewport" content="width=3Ddevice-width, initial-scale=1.0">
@@ -13,6 +23,46 @@
  [x-cloak] { display: none !important; }
     </style>
 </head>
+            HTML
+<script>
+  function setLanguage(lang) {
+    document.body.className = 'lang-' + lang;
+    localStorage.setItem('userLanguage', lang);
+  }
+
+  // Podłączenie pod przyciski PL i EN
+  document.getElementById('btn-pl').addEventListener('click', function(e) {
+    e.preventDefault();
+    setLanguage('pl');
+  });
+
+  document.getElementById('btn-en').addEventListener('click', function(e) {
+    e.preventDefault();
+    setLanguage('en');
+  });
+// Wczytanie zapamiętanego języka lub domyślnie PL
+  const savedLang = localStorage.getItem('userLanguage') || 'pl';
+  setLanguage(savedLang);
+</script>
+             <!-- comp czy smart -->
+            <CSS
+/* Dla ekranów szerszych niż 768px (komputery) */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Dla ekranów o szerokości do 768px (smartfony) */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+                        
+>html class="desktop-only"; 
+      
+                        
 <body class="bg-stone-50 text-stone-900 font-serif antialiased" x-data="{ lang: 'en' }">
 <!-- NAVIGATION BAR -->
     <nav class="sticky top-0 bg-stone-50/90 backdrop-blur-md border-b border-stone-200 z-50">
@@ -825,9 +875,10 @@ border-bottom: 1px
     </style>
 </head>
 <body>
-
+            
+>html class="mobile-only";
 <div class="container">
-    <!-- NAGŁÓWEK -->
+    <!-- NAGŁÓWEK -->   
     <header>
         <div>
             <h1>Katarzyna Brochocka</h1>
@@ -924,7 +975,13 @@ border-bottom: 1px
              </div
         </div>
   <div class="media-container"> 
-     <iframe src="https://youtube.com/enbed/ABgLjUm48i4 title=e=Katarzyna Brochocka Work6"></iframe>
+     <iframe src="https://youtube.com/enbed/ABgLjUm48i4 
+                 title=e=Katarzyna Brochocka Work6"
+                 frameborder="0"
+                 allow="accelerometer; autoplay; clipboard-write;
+                 encrypted-media; gyroscope; picture-in-picture"
+                 allowfullscreen>
+                 </iframe>
    <div class="subtitle": lang="pl" style="margin-top:3px;">Opera / Szczęśliwy ogród życia</div>
      <div class="subtitle": lang="en" style="margin-top:3px;">Opera / Happy Garden of Life</div>
        </div>  
