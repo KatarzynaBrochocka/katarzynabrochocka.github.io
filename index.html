@@ -59,12 +59,10 @@ W pliku HTML oznacz elementy odpowiednimi klasami:
     display: none !important;
   }
 }
-                        
->html class="desktop-only"; 
-      
-                        
-<body class="bg-stone-50 text-stone-900 font-serif antialiased" x-data="{ lang: 'en' }">
-<!-- NAVIGATION BAR -->
+                                                
+<body  class=desktop-only;
+            class="bg-stone-50 text-stone-900 font-serif antialiased" x-data="{ lang: 'en' }">
+<!-- NAVIGATION BAR >html class="desktop-only";  --> 
     <nav class="sticky top-0 bg-stone-50/90 backdrop-blur-md border-b border-stone-200 z-50">
         <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-xl tracking-widest uppercase font-semibold text-stone-800">Katarzyna Brochocka</a>
@@ -87,7 +85,7 @@ W pliku HTML oznacz elementy odpowiednimi klasami:
 </style>
 </head>
 <body>
-
+<div class=desktop-only;
 <div class="container">
 
 <header>
@@ -512,7 +510,7 @@ HTML
             }
         /* Reset & Podstawy -- główne style i kolory *//* */
         {  box-sizing: border-box; margin: 0; padding: 0; }/* RWD dla urządzeń mobilnych */
-        body {
+        body {       
             font-family: 'Georgia', serif; text-transform: uppercase;
             background-color: #f9f9f6;
             color: #1a1a1a;
