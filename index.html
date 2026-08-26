@@ -885,7 +885,7 @@ border-bottom: 1px
              <div class="lang-switcher">
                  for(var i=0; i<en.length; i++) en[i].style.setProperty('display', 'block', 'important');>
        <div class="subtitle" lang="en">Composer</div> 
-    </header>
+    <header>
     <!-- ZDJĘCIE GŁÓWNE -->
     <section class="photo-gallery">
         <div class="photo-wrapper">
@@ -962,8 +962,8 @@ border-bottom: 1px
      <iframe src="https://www.youtube.com/embed/64QWKBO1HMw" title="Katarzyna Brochocka Work5"><iframe>
     <div class="subtitle": lang="pl" style="margin-top:3px;">Sonata fortepianowa nr 2, cz2, fortepian, Clemens Rave</div>
     <div class="subtitle": lang="en" style="margin-top:3px;">Piano sonata nr 2, mvt2, piano, Clemens Rave</div>
-             </div
-        </div>
+     </div.
+       </div.
   <div class="media-container"> 
      <iframe src="https://youtube.com/enbed/ABgLjUm48i4 
                  title=e=Katarzyna Brochocka Work6"
@@ -1021,34 +1021,34 @@ border-bottom: 1px
 <
                  html <script>
     // Logika przełączania zakładek (Biogram)
-    function openTab(tabName) {
+            <function openTab(tabName) {
         var i, tabcontent, tabbtns;
         tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
+        <for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].classList.remove("active");
         }
-        tabbtns = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tabbtns.length; i++) {
+        <tabbtns = document.getElementsByClassName("tab-btn");
+       < for (i = 0; i < tabbtns.length; i++) {
             tabbtns[i].classList.remove("active");
         }
-        document.getElementById(tabName).classList.add("active");
-        event.currentTarget.classList.add("active");
+        <document.getElementById(tabName).classList.add("active");
+        <event.currentTarget.classList.add("active");
     }
 // Niezawodna logika przełączania języków przy pomocy klas CSS
-    function switchLanguage(lang) {
+    <function switchLanguage(lang) {
         var plElements = document.getElementsByClassName("lang-pl");
-        var enElements = document.getElementsByClassName("lang-en");
+        <var enElements = document.getElementsByClassName("lang-en");
         
-        if (lang === 'pl') {
-            for (var i = 0; i < plElements.length; i++) plElements[i].style.setProperty('display', 'block', 'important');
-            for (var i = 0; i < enElements.length; i++) enElements[i].style.setProperty('display', 'none', 'important');
-            document.getElementById('pl-btn').classList.add('active');
-            document.getElementById('en-btn').classList.remove('active');
+        <if (lang === 'pl') {
+            <for (var i = 0; i < plElements.length; i++) plElements[i].style.setProperty('display', 'block', 'important');
+            <for (var i = 0; i < enElements.length; i++) enElements[i].style.setProperty('display', 'none', 'important');
+            <document.getElementById('pl-btn').classList.add('active');
+            <document.getElementById('en-btn').classList.remove('active');
         } else {
-            for (var i = 0; i < plElements.length; i++) plElements[i].style.setProperty('display', 'none', 'important');
-            for (var i = 0; i < enElements.length; i++) enElements[i].style.setProperty('display', 'block', 'important');
-            document.getElementById('en-btn').classList.add('active');
-            document.getElementById('pl-btn').classList.remove('active');
+            <for (var i = 0; i < plElements.length; i++) plElements[i].style.setProperty('display', 'none', 'important');
+            <for (var i = 0; i < enElements.length; i++) enElements[i].style.setProperty('display', 'block', 'important');
+            <document.getElementById('en-btn').classList.add('active');
+            <document.getElementById('pl-btn').classList.remove('active');
         }
     }
     // Wymuszenie startu strony w języku  polskim
